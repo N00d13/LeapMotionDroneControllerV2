@@ -21,17 +21,17 @@ float rightY;
 //Find the serial port that Arduino is connected to and set up Serial object to listen to the port
 void setup() {
     size(500, 500);
-	String portName = Serial.list()[0]; //change the 0 to a 1, 2 etc. to match port
-	myPort = new Serial(this, portName, 9600); //change portName
-	leap = new LeapMotion(this);
+    String portName = Serial.list()[0]; //change the 0 to a 1, 2 etc. to match port
+    myPort = new Serial(this, portName, 9600); //change portName
+    leap = new LeapMotion(this);
 }
 
 //Send leap output over the serial port
-void draw() {
-	//Get hands and set positions
-	int hands = 0;
-	for (Hand hand : leap.getHandList()) {
-		if (hands < 2){
+void draw(){
+    //Get hands and set positions
+    int hands = 0;
+    for (Hand hand : leap.getHandList()) {
+        if (hands < 2){
             PVector handPosition = leap.getPosition(hand);
             if (hand.isRight()){
                 setRightHandPos(handPosition.x, handPosition,y);
@@ -43,9 +43,9 @@ void draw() {
                 leftRoll = getRoll(hand);
                 leftThrust = getPitch(hand);
             }
-		}
+        }
 
-		hands++;
+        hands++;
 
         //write to port -> needs to be changed to match arduino side and go to correct port
         myPort.write(leftRoll);
