@@ -54,9 +54,13 @@ void setup()
   - Updates PPM information
   - Send information through PPM frame
 */
-void loop() 
-{
-  setPPM(1, 1200); //Test code
+void loop() {
+  if (Serial.available()) { //check if there is something to read
+    setPPM(1, 1200); //Test code
+  }
+  else{
+    System.out.println("Nothing was written");
+  }
 }
 
 

@@ -1,187 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08ef8207-fe99-496b-b82a-efd1864744a4" name="Changes" comment="Updated File organization">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/LeapJava1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/LeapMotionDroneControllerV2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LeapMotionDroneControllerV2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/LeapJava.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/.github/workflows/update_gradle_wrapper.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/JSerialComm-Mac/.github/workflows/update_gradle_wrapper.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/AUTHORS.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/COPYING" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/JSerialComm-Mac/COPYING" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/COPYING.LESSER" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/JSerialComm-Mac/COPYING.LESSER" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/LICENSE-APACHE-2.0" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/JSerialComm-Mac/LICENSE-APACHE-2.0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/LICENSE-LGPL-3.0" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/JSerialComm-Mac/LICENSE-LGPL-3.0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/NOTICE" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/JSerialComm-Mac/NOTICE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/JSerialComm-Mac/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/JSerialComm-Mac/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/JSerialComm-Mac/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/JSerialComm-Mac/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/JSerialComm-Mac/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/c/Posix/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/c/Posix/PosixHelperFunctions.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/c/Posix/PosixHelperFunctions.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/c/Posix/SerialPort_Posix.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/c/Posix/com_fazecast_jSerialComm_SerialPort.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/c/Posix/jni/Android.mk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/c/Posix/jni/Application.mk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/c/Windows/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/c/Windows/Makefile.native" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/c/Windows/SerialPort_Windows.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/c/Windows/WindowsHelperFunctions.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/c/Windows/WindowsHelperFunctions.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/c/Windows/ftdi/ftd2xx.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/java/com/fazecast/jSerialComm/SerialPort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/java/com/fazecast/jSerialComm/SerialPortDataListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/java/com/fazecast/jSerialComm/SerialPortDataListenerWithExceptions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/java/com/fazecast/jSerialComm/SerialPortEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/java/com/fazecast/jSerialComm/SerialPortIOException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/java/com/fazecast/jSerialComm/SerialPortInvalidPortException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/java/com/fazecast/jSerialComm/SerialPortMessageListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/java/com/fazecast/jSerialComm/SerialPortMessageListenerWithExceptions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/java/com/fazecast/jSerialComm/SerialPortPacketListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/java/com/fazecast/jSerialComm/SerialPortTimeoutException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Android/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Android/arm64-v8a/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Android/armeabi-v7a/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Android/x86/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Android/x86_64/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/FreeBSD/arm64/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/FreeBSD/x86/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/FreeBSD/x86_64/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Linux/armv5/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Linux/armv6/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Linux/armv6hf/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Linux/armv7/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Linux/armv7hf/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Linux/armv8_32/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Linux/armv8_64/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Linux/ppc64le/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Linux/x86/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Linux/x86_64/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/OSX/aarch64/libjSerialComm.jnilib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/OSX/x86/libjSerialComm.jnilib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/OSX/x86_64/libjSerialComm.jnilib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/OpenBSD/amd64/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/OpenBSD/x86/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Solaris/sparcv8plus_32/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Solaris/sparcv9_64/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Solaris/x86/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Solaris/x86_64/libjSerialComm.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Windows/aarch64/jSerialComm.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Windows/armv7/jSerialComm.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Windows/x86/jSerialComm.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/main/resources/Windows/x86_64/jSerialComm.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/moduleInfo/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/test/c/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/test/c/testEnumeratePosix.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/test/c/testEnumerateWindows.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/test/c/testOpenClose.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/test/c/testRS485.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/JSerialComm-Mac/src/test/java/com/fazecast/jSerialComm/SerialPortTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/head_sha.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/include/Leap.h" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/include/Leap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/include/Leap.i" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/include/Leap.i" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/include/LeapMath.h" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/include/LeapMath.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/include/LeapObjectiveC.h" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/include/LeapObjectiveC.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/include/LeapObjectiveC.mm" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/include/LeapObjectiveC.mm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/lib/Leap.py" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/lib/Leap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/lib/LeapCSharp.NET3.5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/lib/LeapCSharp.NET3.5.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/lib/LeapCSharp.NET4.0.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/lib/LeapCSharp.NET4.0.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/lib/LeapJava.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/lib/LeapJava.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/lib/LeapPython.so" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/lib/LeapPython.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/lib/UnityAssets/Plugins/LeapCSharp.NET3.5.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/lib/UnityAssets/Plugins/LeapCSharp.bundle/Contents/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/lib/UnityAssets/Plugins/LeapCSharp.bundle/Contents/MacOS/libLeap.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/lib/UnityAssets/Plugins/LeapCSharp.bundle/Contents/MacOS/libLeapCSharp.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/lib/UnityAssets/Plugins/LeapCSharp.bundle/Contents/_CodeSignature/CodeResources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/lib/libLeap.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/lib/libLeap.dylib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/lib/libLeapCSharp.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/lib/libLeapCSharp.dylib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/lib/libLeapJava.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/lib/libLeapJava.dylib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/util/LeapScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/util/LeapScene.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/util/LeapScene.h" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/util/LeapScene.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/util/LeapUtil.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/util/LeapUtil.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/util/LeapUtil.h" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/util/LeapUtil.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/util/LeapUtilGL.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/util/LeapUtilGL.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/util/LeapUtilGL.h" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Mac/util/LeapUtilGL.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Mac/LeapSDK-Mac/version.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/JSerialComm-Windows/jSerialComm-2.9.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/JSerialComm-Windows/jSerialComm-2.9.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/head_sha.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/head_sha.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/include/Leap.h" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/include/Leap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/include/Leap.i" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/include/Leap.i" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/include/LeapC.h" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/include/LeapC.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/include/LeapMath.h" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/include/LeapMath.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/Leap.py" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/Leap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/LeapCSharp.NET3.5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/LeapCSharp.NET3.5.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/LeapCSharp.NET4.0.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/LeapCSharp.NET4.0.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/LeapCSharp.NET4.5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/LeapCSharp.NET4.5.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/LeapJava.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/LeapJava.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/UnityAssets/Plugins/LeapCSharp.NET3.5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/UnityAssets/Plugins/LeapCSharp.NET3.5.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/UnityAssets/Plugins/x86/LeapC.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/UnityAssets/Plugins/x86/LeapC.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/UnityAssets/Plugins/x86_64/LeapC.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/UnityAssets/Plugins/x86_64/LeapC.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/x64/Leap.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/x64/Leap.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/x64/Leap.lib" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/x64/Leap.lib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/x64/LeapC.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/x64/LeapC.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/x64/LeapC.lib" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/x64/LeapC.lib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/x64/LeapJava.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/x64/LeapJava.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/x64/LeapPython.pyd" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/x64/LeapPython.pyd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/x64/msvcp120.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/x64/msvcp120.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/x64/msvcr120.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/x64/msvcr120.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/x86/Leap.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/x86/Leap.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/x86/Leap.lib" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/x86/Leap.lib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/x86/LeapC.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/x86/LeapC.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/x86/LeapC.lib" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/x86/LeapC.lib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/x86/LeapJava.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/x86/LeapJava.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/x86/LeapPython.pyd" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/x86/LeapPython.pyd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/x86/msvcp120.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/x86/msvcp120.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/lib/x86/msvcr120.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/lib/x86/msvcr120.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/Arm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/Arm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/Bone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/Bone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/CSharpExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/CSharpExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/CircularObjectBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/CircularObjectBuffer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/ClockCorrelator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/ClockCorrelator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/Config.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/Config.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/Connection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/Connection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/CopyFromLeapCExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/CopyFromLeapCExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/CopyFromOtherExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/CopyFromOtherExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/Device.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/Device.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/DeviceList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/DeviceList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/DistortionData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/DistortionData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/DistortionDictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/DistortionDictionary.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/Events.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/Events.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/FailedDevice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/FailedDevice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/FailedDeviceList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/FailedDeviceList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/Finger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/Finger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/Frame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/Frame.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/Hand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/Hand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/IController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/IController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/Image.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/Image.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/ImageData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/ImageData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/ImageFuture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/ImageFuture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/InteractionBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/InteractionBox.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/LeapC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/LeapC.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/LeapQuaternion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/LeapQuaternion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/LeapTransform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/LeapTransform.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/Logger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/Logger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/Matrix.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/Matrix.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/MessageSeverity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/MessageSeverity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/ObjectPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/ObjectPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/PendingImages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/PendingImages.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/PooledObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/PooledObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/StructMarshal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/StructMarshal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/TimeBracket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/TimeBracket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/TransformExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/TransformExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/src/Vector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/src/Vector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libraries/Windows/LeapSDK-Windows/version.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/LeapSDK-Windows/version.txt" afterDir="false" />
+    <list default="true" id="b186f768-f685-465f-8f7e-4072a69a327d" name="Changes" comment="degree to bits">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jSerialComm_2_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/ControllerListener.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/ControllerTX.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/SerialPortWriter.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/ui/LeapMotionControllerApp.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/ui/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/model/ControllerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/ControllerListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,10 +18,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="29211PZZx6EbZ6XmMiCLEx7ZomV" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="26tAGVxxFzR4svpgEyMUBGT5p4x" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -204,82 +36,93 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Libraries/JSerialComm-Windows/jSerialComm-2.9.1.jar" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.Leap Motion SDK">
-    <configuration name="Leap Motion SDK" type="Application" factoryName="Application">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="main.ui.Main" />
       <module name="LeapMotionDroneControllerV2" />
-      <option name="VM_PARAMETERS" value="-Djava.library.path=&quot;C:\Users\matt2\IdeaProjects\LeapMotionDroneControllerV2\Libraries\LeapSDK-Windows\lib\x64&quot;" />
+      <option name="VM_PARAMETERS" value="-Djava.library.path=&quot;$PROJECT_DIR$/Libraries/LeapSDK-Mac/lib&quot;" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.ui.Main" />
-      <module name="LeapMotionDroneControllerV2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.Leap Motion SDK" />
-      <item itemvalue="Application.Main" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="08ef8207-fe99-496b-b82a-efd1864744a4" name="Changes" comment="" />
-      <created>1652296150418</created>
+      <changelist id="b186f768-f685-465f-8f7e-4072a69a327d" name="Changes" comment="" />
+      <created>1648232412464</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1652296150418</updated>
+      <updated>1648232412464</updated>
     </task>
-    <task id="LOCAL-00001" summary="Test Commit">
-      <created>1652296192938</created>
+    <task id="LOCAL-00001" summary="added Leap SDK and processing">
+      <created>1648240238108</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1652296192938</updated>
+      <updated>1648240238108</updated>
     </task>
-    <task id="LOCAL-00002" summary="Updated File organization">
-      <created>1652300623023</created>
+    <task id="LOCAL-00002" summary="added Leap SDK and processing">
+      <created>1648240470532</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1652300623023</updated>
+      <updated>1648240470532</updated>
     </task>
-    <task id="LOCAL-00003" summary="Updated File organization">
-      <created>1652300729160</created>
+    <task id="LOCAL-00003" summary="fixed format">
+      <created>1648240704464</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1652300729160</updated>
+      <updated>1648240704464</updated>
     </task>
-    <task id="LOCAL-00004" summary="Updated File organization">
-      <created>1652300835418</created>
+    <task id="LOCAL-00004" summary="added degree to bit conversion">
+      <created>1652298566243</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1652300835418</updated>
+      <updated>1652298566243</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added degree to bit conversion">
+      <created>1652299154414</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652299154414</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added degree to bit conversion">
+      <created>1652299623547</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652299623547</updated>
+    </task>
+    <task id="LOCAL-00007" summary="library clean">
+      <created>1652304560444</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652304560444</updated>
+    </task>
+    <task id="LOCAL-00008" summary="degree to bits">
+      <created>1652304904737</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652304904737</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -287,21 +130,18 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
-                <map>
-                  <entry key="Show.Git.Branches" value="false" />
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test Commit" />
-    <MESSAGE value="Updated File organization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated File organization" />
+    <MESSAGE value="added Leap SDK and processing" />
+    <MESSAGE value="fixed format" />
+    <MESSAGE value="added degree to bit conversion" />
+    <MESSAGE value="library clean" />
+    <MESSAGE value="degree to bits" />
+    <option name="LAST_COMMIT_MESSAGE" value="degree to bits" />
   </component>
 </project>
