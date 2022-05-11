@@ -54,6 +54,7 @@ void setup()
   - Updates PPM information
   - Send information through PPM frame
 */
+//test
 void loop() {
   if (Serial.available()) { //check if there is something to read
     setPPM(1, 1200); //Test code
