@@ -26,6 +26,7 @@ public class ControllerListener extends Listener {
         float yawDegrees = getRightYawDegrees();
         boolean leftHandArmed = getLeftRollArming();
         float leftHandThrust = getLeftThrustingPitch();
+        //dfds
 
         try {
             portWriter.WriteToPort(56, "pitch");
