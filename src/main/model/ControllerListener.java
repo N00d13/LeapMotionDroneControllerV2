@@ -21,16 +21,11 @@ public class ControllerListener extends Listener {
         HandList hands = frame.hands();
         assignHands(hands);
 
-        float rollDegrees = degreeConversion(getRightRollDegrees());
-        float pitchDegrees = degreeConversion(getRightPitchDegrees());
-        float yawDegrees = degreeConversion(getRightYawDegrees());
+        float rollDegrees = getRightRollDegrees();
+        float pitchDegrees = getRightPitchDegrees();
+        float yawDegrees = getRightYawDegrees();
         boolean leftHandArmed = getLeftRollArming();
-        float leftHandThrust = degreeConversion(getLeftThrustingPitch());
-
-        System.out.println(rollDegrees);
-        System.out.println(pitchDegrees);
-        System.out.println(yawDegrees);
-        System.out.println(leftHandThrust);
+        float leftHandThrust = getLeftThrustingPitch();
 
         try {
             portWriter.WriteToPort(56, "pitch");
@@ -152,10 +147,5 @@ public class ControllerListener extends Listener {
             pitchDegrees += 90;
             return pitchDegrees;
         }
-    }
-
-    //Converts degrees to bits
-    private int degreeConversion(float degree){
-        return (int) Math.floor(degree*(125/180));
     }
 }
