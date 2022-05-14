@@ -21,32 +21,33 @@ public class ControllerListener extends Listener {
         HandList hands = frame.hands();
         assignHands(hands);
 
-        float rollDegrees = degreeConversion(getRightRollDegrees());
-        float pitchDegrees = degreeConversion(getRightPitchDegrees());
-        float yawDegrees = degreeConversion(getRightYawDegrees());
+        int rollDegrees = degreeConversion(100) ;//degreeConversion(getRightRollDegrees());
+        int pitchDegrees = degreeConversion(getRightPitchDegrees());
+        int yawDegrees = degreeConversion(getRightYawDegrees());
         boolean leftHandArmed = getLeftRollArming();
-        float leftHandThrust = degreeConversion(getLeftThrustingPitch());
+        int leftHandThrust = degreeConversion(getLeftThrustingPitch());
 
         System.out.println(rollDegrees);
 
         try {
-            portWriter.WriteToPort(56, "pitch");
-            portWriter.WriteToPort(56, "yaw");
-            portWriter.WriteToPort(56, "pich");
-            portWriter.WriteToPort(56, "pitch");
+            portWriter.WriteToPort(0009, "pitch");
+            System.out.println("Wrote to Port");
+//            portWriter.WriteToPort(56, "yaw");
+//            portWriter.WriteToPort(56, "pitch");
+//            portWriter.WriteToPort(56, "thrust");
         } catch (IOException e) {
             //STUB
         }
 
 
-        System.out.println("Frame id: " + frame.id() +
-                            ", Right hand?: " + rightHand.isRight() +
-                            ", Hand count: " + frame.hands().count() +
-                            //", Roll Degrees: " + rollDegrees +
-                            //", Pitch Degrees: " + pitchDegrees +
-                            ", Left Hand armed: " + leftHandArmed +
-                            ", Left Hand Thrust: " + leftHandThrust
-                            );
+        //System.out.println("Frame id: " + frame.id() +
+//                            ", Right hand?: " + rightHand.isRight() +
+//                            ", Hand count: " + frame.hands().count() +
+//                            //", Roll Degrees: " + rollDegrees +
+//                            //", Pitch Degrees: " + pitchDegrees +
+//                            ", Left Hand armed: " + leftHandArmed +
+//                            ", Left Hand Thrust: " + leftHandThrust
+//                            );
 
         //send position to transmitter
         ControllerTX.setAction(rollDegrees, pitchDegrees, yawDegrees, leftHandThrust, leftHandArmed);

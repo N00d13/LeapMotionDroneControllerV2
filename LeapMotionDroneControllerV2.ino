@@ -11,15 +11,16 @@ volatile uint16_t Ppm[NO_OF_PPM_CHANNELS]; //Array that holds servo values for p
 volatile uint16_t PpmIn[NO_OF_PPM_CHANNELS]; //Array that holds servo values for ppm signal after read (usually ranges from 1000-2000)
 
 /*
- * Setup for ppm array values and Serial
- */
-void setup() 
+   Setup for ppm array values and Serial
+*/
+
+void setup()
 {
-  Serial.begin(115200); //Begins serial
-  Serial.println("SERIAL OPENED");
+  Serial.begin(9600); //Begins serial
+  //Serial.println("SERIAL OPENED");
 
   //Initialize all channels with default value
-  for (uint8_t channel = 0; channel < sizeof(PpmIn)/sizeof(int); channel++) 
+  for (uint8_t channel = 0; channel < sizeof(PpmIn) / sizeof(int); channel++)
   {
     PpmIn[channel] = DEFAULT_SERVO_VALUE;
   }
@@ -44,7 +45,7 @@ void setup()
     //stub
   }
 
-  Serial.println("SERIAL STARTED");
+  //Serial.println("SERIAL STARTED");
 }
 
 /*
@@ -56,12 +57,34 @@ void setup()
 */
 //test
 void loop() {
-  if (Serial.available()) { //check if there is something to read
-    setPPM(1, 1200); //Test code
+  Serial.write(5);
+  if (Serial.available() >= 1){//k if there is something to read
+    //String testValueString = Serial.readString();
+    //int testValueInt = testValueString.toInt();
+
+    long myInt = Serial.parseInt(SKIP_ALL, '\n');
+    
+    myInt += 1700;
+
+    if (myInt > 1705) {
+      setPPM(1, 1700); //Test code
+    } else {
+      setPPM(1, 1200); //Test code
+    }
+    
+    delay(100);
   }
-  else{
-    System.out.println("Nothing was written");
+  else {
+    //Stub
   }
+}
+
+
+int ChannelShift(int value) {
+  value += 125;
+  value *= 3.33;
+  value += 1000;
+  return value;
 }
 
 
@@ -72,9 +95,9 @@ void setPPM(uint8_t channel_num, uint16_t ppm_value) {
 /*
   Creates PPM signal
 */
-ISR(TIMER1_COMPA_vect) 
+ISR(TIMER1_COMPA_vect)
 {
-  
+
   static boolean state = true;
 
   //copy incomming values to ppm array
@@ -82,15 +105,15 @@ ISR(TIMER1_COMPA_vect)
 
   TCNT1 = 0;
 
-  if (state) 
-  {  
+  if (state)
+  {
     //start pulse
     digitalWrite(SIGNAL_PIN, IS_POSITIVE_POLARITY);
     OCR1A = PPM_PULSE_LEN * 2;
     state = false;
   }
-  else 
-  {  
+  else
+  {
     //end pulse and calculate when to start the next pulse
     static byte cur_chan_numb;
     static unsigned int calc_rest;
@@ -98,14 +121,14 @@ ISR(TIMER1_COMPA_vect)
     digitalWrite(SIGNAL_PIN, !IS_POSITIVE_POLARITY);
     state = true;
 
-    if (cur_chan_numb >= NO_OF_PPM_CHANNELS) 
+    if (cur_chan_numb >= NO_OF_PPM_CHANNELS)
     {
       cur_chan_numb = 0;
-      calc_rest = calc_rest + PPM_PULSE_LEN;// 
+      calc_rest = calc_rest + PPM_PULSE_LEN;//
       OCR1A = (PPM_FRAME_LEN - calc_rest) * 2;
       calc_rest = 0;
     }
-    else 
+    else
     {
       OCR1A = (Ppm[cur_chan_numb] - PPM_PULSE_LEN) * 2;
       calc_rest = calc_rest + Ppm[cur_chan_numb];

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b186f768-f685-465f-8f7e-4072a69a327d" name="Changes" comment="degree to bits">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jSerialComm_2_9_1.xml" beforeDir="false" />
+    <list default="true" id="08ef8207-fe99-496b-b82a-efd1864744a4" name="Changes" comment="Updated File organization">
+      <change beforePath="$PROJECT_DIR$/.idea/LeapMotionDroneControllerV2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LeapMotionDroneControllerV2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeapMotionDroneControllerV2.ino" beforeDir="false" afterPath="$PROJECT_DIR$/LeapMotionDroneControllerV2.ino" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/ControllerListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/ControllerTX.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/SerialPortWriter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/ui/LeapMotionControllerApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/ui/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/SerialPortWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/SerialPortWriter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/model/ControllerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/ControllerListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/model/SerialPortWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/SerialPortWriter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,15 +17,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="26tAGVxxFzR4svpgEyMUBGT5p4x" />
+  <component name="ProjectId" id="29211PZZx6EbZ6XmMiCLEx7ZomV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
-    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -36,93 +30,103 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Libraries/JSerialComm/jSerialComm-2.9.1.jar" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+  <component name="RunManager" selected="Application.Leap Motion SDK">
+    <configuration name="Leap Motion SDK" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.ui.Main" />
       <module name="LeapMotionDroneControllerV2" />
-      <option name="VM_PARAMETERS" value="-Djava.library.path=&quot;$PROJECT_DIR$/Libraries/LeapSDK-Mac/lib&quot;" />
+      <option name="VM_PARAMETERS" value="-Djava.library.path=&quot;C:\Users\matt2\IdeaProjects\LeapMotionDroneControllerV2\Libraries\LeapSDK-Windows\lib\x64&quot;" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.ui.Main" />
+      <module name="LeapMotionDroneControllerV2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Leap Motion SDK" />
+      <item itemvalue="Application.Main" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b186f768-f685-465f-8f7e-4072a69a327d" name="Changes" comment="" />
-      <created>1648232412464</created>
+      <changelist id="08ef8207-fe99-496b-b82a-efd1864744a4" name="Changes" comment="" />
+      <created>1652296150418</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1648232412464</updated>
+      <updated>1652296150418</updated>
     </task>
-    <task id="LOCAL-00001" summary="added Leap SDK and processing">
-      <created>1648240238108</created>
+    <task id="LOCAL-00001" summary="Test Commit">
+      <created>1652296192938</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1648240238108</updated>
+      <updated>1652296192938</updated>
     </task>
-    <task id="LOCAL-00002" summary="added Leap SDK and processing">
-      <created>1648240470532</created>
+    <task id="LOCAL-00002" summary="Updated File organization">
+      <created>1652300623023</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1648240470532</updated>
+      <updated>1652300623023</updated>
     </task>
-    <task id="LOCAL-00003" summary="fixed format">
-      <created>1648240704464</created>
+    <task id="LOCAL-00003" summary="Updated File organization">
+      <created>1652300729160</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1648240704464</updated>
+      <updated>1652300729160</updated>
     </task>
-    <task id="LOCAL-00004" summary="added degree to bit conversion">
-      <created>1652298566243</created>
+    <task id="LOCAL-00004" summary="Updated File organization">
+      <created>1652300835418</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1652298566243</updated>
+      <updated>1652300835418</updated>
     </task>
-    <task id="LOCAL-00005" summary="added degree to bit conversion">
-      <created>1652299154414</created>
+    <task id="LOCAL-00005" summary="Updated File organization">
+      <created>1652303848149</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1652299154414</updated>
+      <updated>1652303848149</updated>
     </task>
-    <task id="LOCAL-00006" summary="added degree to bit conversion">
-      <created>1652299623547</created>
+    <task id="LOCAL-00006" summary="Updated File organization">
+      <created>1652304952570</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1652299623547</updated>
+      <updated>1652304952570</updated>
     </task>
-    <task id="LOCAL-00007" summary="library clean">
-      <created>1652304560444</created>
+    <task id="LOCAL-00007" summary="Updated File organization">
+      <created>1652305071574</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1652304560444</updated>
+      <updated>1652305071574</updated>
     </task>
-    <task id="LOCAL-00008" summary="degree to bits">
-      <created>1652304904737</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1652304904737</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,18 +134,22 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added Leap SDK and processing" />
-    <MESSAGE value="fixed format" />
-    <MESSAGE value="added degree to bit conversion" />
-    <MESSAGE value="library clean" />
-    <MESSAGE value="degree to bits" />
-    <option name="LAST_COMMIT_MESSAGE" value="degree to bits" />
+    <MESSAGE value="Test Commit" />
+    <MESSAGE value="Updated File organization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated File organization" />
   </component>
 </project>

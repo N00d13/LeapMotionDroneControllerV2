@@ -11,7 +11,8 @@ public class SerialPortWriter {
     }
 
     private void init() {
-        sp = SerialPort.getCommPort("COM3"); // port name TODO: must be changed
+
+        sp = SerialPort.getCommPort("COM6"); // port name TODO: must be changed
         sp.setComPortParameters(9600, 8, 1, 0); // default connection settings for Arduino
         sp.setComPortTimeouts(SerialPort.TIMEOUT_WRITE_BLOCKING, 0, 0); // block until bytes can be written
 
@@ -24,11 +25,12 @@ public class SerialPortWriter {
     }
 
     public void WriteToPort(int inputValue, String channelName) throws IOException{
-        int streamPlaceholder = GetStreamPlaceholder(channelName);
-        sp.getOutputStream().write(streamPlaceholder);
-        sp.getOutputStream().flush();
+        //int streamPlaceholder = GetStreamPlaceholder(channelName);
+        //sp.getOutputStream().write(streamPlaceholder);
+        //sp.getOutputStream().flush();
         sp.getOutputStream().write(inputValue);
         sp.getOutputStream().flush();
+        System.out.println("Really Wrote to Port" + inputValue);
     }
 
     private int GetStreamPlaceholder (String channelName) {
