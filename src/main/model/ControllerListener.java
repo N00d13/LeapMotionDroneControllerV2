@@ -28,11 +28,13 @@ public class ControllerListener extends Listener {
         boolean leftHandArmed = getLeftRollArming();
         int leftHandThrust = degreeConversion(getLeftThrustingPitch());
 
-        System.out.println(rollDegrees);
-
         try {
-            portWriter.WriteToPort(0007, "pitch");
-
+            //rollDeg = readSize(rollDegrees)
+            //for (int i=0;i<len(rollDeg);i++){portWriter.WriteToPort(i, "roll");}
+            portWriter.WriteToPort(0, "pitch");
+            portWriter.WriteToPort(0, "pitch");
+            portWriter.WriteToPort(0, "pitch");
+            portWriter.WriteToPort(9, "pitch");
 
             System.out.println("Wrote to Port");
 
@@ -46,12 +48,11 @@ public class ControllerListener extends Listener {
             //STUB
         }
 
-
         //System.out.println("Frame id: " + frame.id() +
 //                            ", Right hand?: " + rightHand.isRight() +
 //                            ", Hand count: " + frame.hands().count() +
-//                            //", Roll Degrees: " + rollDegrees +
-//                            //", Pitch Degrees: " + pitchDegrees +
+//                            ", Roll Degrees: " + rollDegrees +
+//                            ", Pitch Degrees: " + pitchDegrees +
 //                            ", Left Hand armed: " + leftHandArmed +
 //                            ", Left Hand Thrust: " + leftHandThrust
 //                            );
@@ -162,5 +163,20 @@ public class ControllerListener extends Listener {
     //Converts degree to bits
     private int degreeConversion(float degree){
         return (int) Math.floor(degree*(125/180));
+    }
+
+    //Make sure all numbers are 4 digits long
+    private int readSize(int input){
+        String tempNum =Integer.toString(input);
+
+        while (tempNum.length() < 4){
+            if (tempNum.charAt(0) == '-'){
+                continue;
+            }
+            else{
+                tempNum = String.format("%01s" , tempNum);
+            }
+        }
+        return Integer.parseInt(tempNum);
     }
 }
