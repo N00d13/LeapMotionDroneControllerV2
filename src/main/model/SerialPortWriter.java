@@ -28,6 +28,8 @@ public class SerialPortWriter {
         //int streamPlaceholder = GetStreamPlaceholder(channelName);
         //sp.getOutputStream().write(streamPlaceholder);
         //sp.getOutputStream().flush();
+        //if (inputValue < 100){
+        //  }
         sp.getOutputStream().write(inputValue);
         sp.getOutputStream().flush();
         System.out.println("Really Wrote to Port" + inputValue);

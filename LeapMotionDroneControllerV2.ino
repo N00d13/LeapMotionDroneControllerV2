@@ -57,16 +57,17 @@ void setup()
 */
 //test
 void loop() {
-  Serial.write(5);
+
+  
   if (Serial.available() >= 1){//k if there is something to read
     //String testValueString = Serial.readString();
     //int testValueInt = testValueString.toInt();
 
-    long myInt = Serial.parseInt(SKIP_ALL, '\n');
+    long myInt = Serial.read();
     
     myInt += 1700;
 
-    if (myInt > 1705) {
+    if (myInt > 1705 && myInt < 1710) {
       setPPM(1, 1700); //Test code
     } else {
       setPPM(1, 1200); //Test code

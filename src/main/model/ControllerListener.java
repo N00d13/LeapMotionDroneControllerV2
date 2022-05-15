@@ -1,4 +1,5 @@
 package main.model;
+import java.util.concurrent.TimeUnit;
 
 import com.leapmotion.leap.*;
 import main.model.ControllerTX;
@@ -30,12 +31,18 @@ public class ControllerListener extends Listener {
         System.out.println(rollDegrees);
 
         try {
-            portWriter.WriteToPort(0009, "pitch");
+            portWriter.WriteToPort(0007, "pitch");
+
+
             System.out.println("Wrote to Port");
+
+            TimeUnit.SECONDS.sleep(1);
+//
+//            portWriter.WriteToPort(2, "pitch");
 //            portWriter.WriteToPort(56, "yaw");
 //            portWriter.WriteToPort(56, "pitch");
 //            portWriter.WriteToPort(56, "thrust");
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             //STUB
         }
 
