@@ -8,9 +8,9 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class LeapMotionControllerApp {
-    private Scanner input;
     private ControllerListener listener;
     private Controller controller;
+    private Scanner input;
 
     public LeapMotionControllerApp() {
         runLeapMotionControllerApp();
@@ -23,7 +23,6 @@ public class LeapMotionControllerApp {
 
     private void init() {
         input = new Scanner(System.in);
-
         SerialPortWriter portWriter = new SerialPortWriter(); //Creates Serial Port
         portWriter.connect("COM6", 38400, 8, 1, 0); //Initializes serial port TODO: Change COM port to correct Arduino COM port
 
@@ -35,8 +34,8 @@ public class LeapMotionControllerApp {
 
     private void welcomeStatement() {
         System.out.println("Hello, welcome to the leap motion hand controller app.");
-        System.out.println("Connect your leap motion when you are ready and then press \"s\"");
-        String nextInput = input.nextLine();
+        System.out.println("Connect your leap motion when you are ready for awesomeness");
+        String nextInput = "";
         while (!controller.isConnected() && nextInput != "s") {
             if (controller.isConnected()) {
                 System.out.println("press \"s\" to start the program");
@@ -47,6 +46,7 @@ public class LeapMotionControllerApp {
             }
         }
         listener.onConnect(controller);
+
         System.out.println("Program is starting...");
         runProgram();
     }
