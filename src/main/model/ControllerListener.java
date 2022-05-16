@@ -3,6 +3,7 @@ import java.util.concurrent.TimeUnit;
 
 import com.leapmotion.leap.*;
 import main.model.ControllerTX;
+import java.lang.Integer;
 
 import java.io.IOException;
 
@@ -31,10 +32,9 @@ public class ControllerListener extends Listener {
         try {
             //rollDeg = readSize(rollDegrees)
             //for (int i=0;i<len(rollDeg);i++){portWriter.WriteToPort(i, "roll");}
-            portWriter.WriteToPort(0, "pitch");
-            portWriter.WriteToPort(0, "pitch");
-            portWriter.WriteToPort(0, "pitch");
-            portWriter.WriteToPort(9, "pitch");
+            Integer intValue = 120;
+            byte byteValue = intValue.byteValue();
+            portWriter.WriteToPort(byteValue, "pitch");
 
             System.out.println("Wrote to Port");
 

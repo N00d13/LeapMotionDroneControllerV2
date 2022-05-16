@@ -24,7 +24,7 @@ public class SerialPortWriter {
         }
     }
 
-    public void WriteToPort(int inputValue, String channelName) throws IOException{
+    public void WriteToPort(byte inputValue, String channelName) throws IOException{
         //int streamPlaceholder = GetStreamPlaceholder(channelName);
         //sp.getOutputStream().write(streamPlaceholder);
         //sp.getOutputStream().flush();

@@ -17,7 +17,8 @@ volatile uint16_t PpmIn[NO_OF_PPM_CHANNELS]; //Array that holds servo values for
 void setup()
 {
   Serial.begin(9600); //Begins serial
-  //Serial.println("SERIAL OPENED");
+  Serial.println("SERIAL OPENED");
+
 
   //Initialize all channels with default value
   for (uint8_t channel = 0; channel < sizeof(PpmIn) / sizeof(int); channel++)
@@ -45,7 +46,8 @@ void setup()
     //stub
   }
 
-  //Serial.println("SERIAL STARTED");
+  Serial.println("SERIAL STARTED");
+
 }
 
 /*
@@ -57,27 +59,41 @@ void setup()
 */
 //test
 void loop() {
+  ////  long myInt = Serial.parseInt(SKIP_ALL, '\n');
+  //  String myInt = Serial.readString();
+  //  Serial.println("the parsed int is: " );
+  //  Serial.println(myInt);
+  String myString;
+  //  delay(500);
 
+  //Serial.write("120\n");
+
+  while (Serial.available() >= 1) { //If there is something to read
+    int writeValueInt = 127;
+    Serial.write(writeValueInt);
+    
+    char c = Serial.read();
+    myString += c;
+    Serial.write(" ");
+  }
+
+  Serial.println("String is: " + myString);
+
+  delay(100);
   
-  if (Serial.available() >= 1){//k if there is something to read
-    //String testValueString = Serial.readString();
-    //int testValueInt = testValueString.toInt();
+  int newInt = myString.toInt();
+  newInt += 1700;
 
-    long myInt = Serial.read();
-    
-    myInt += 1700;
+  if (newInt > 1815 && newInt < 1821) {
+    setPPM(1, 1700); //Test code
+  } else {
+    //setPPM(1, 1200); //Test code
+  }
 
-    if (myInt > 1705 && myInt < 1710) {
-      setPPM(1, 1700); //Test code
-    } else {
-      setPPM(1, 1200); //Test code
-    }
-    
-    delay(100);
-  }
-  else {
-    //Stub
-  }
+
+ 
+ 
+
 }
 
 

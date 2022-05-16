@@ -14,8 +14,8 @@ public class ControllerTX {
             ly = 40; //whatever value we can consider true -> send to channel
         }
 
-        System.out.println("The Right JoyStick Position is: " + rx + ry);
-        System.out.println("The Left JoyStick Position is: " + lx + ly);
+        //System.out.println("The Right JoyStick Position is: " + rx + ry);
+        //System.out.println("The Left JoyStick Position is: " + lx + ly);
 
         //These results should be sent to transmitter
     }
