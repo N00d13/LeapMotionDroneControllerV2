@@ -1,25 +1,38 @@
 package main.model;
-import java.util.concurrent.TimeUnit;
 
 import com.leapmotion.leap.*;
-import main.model.ControllerTX;
-import java.lang.Integer;
 
-import java.io.IOException;
+import java.lang.Integer;
 
 //Object that runs each frame the controller is connected
 public class ControllerListener extends Listener {
     private Hand leftHand;
     private Hand rightHand;
-    SerialPortWriter portWriter;
+    private SerialPortWriter portWriter;
+
+    //Constructor
+    public ControllerListener(SerialPortWriter portWriter) {
+        this.portWriter = portWriter;
+    }
+
+    public void onInit(Controller controller) {
+        System.out.println("Controller initialized");
+    }
 
     public void onConnect(Controller controller) {
-        portWriter = new SerialPortWriter();
         System.out.println("Controller is connected");
     }
 
+    public void onDisconnect(Controller controller) {
+        System.out.println("Controller is disconnected");
+    }
+
+    public void onExit(Controller controller){
+        System.out.println("Controller is disconnected");
+    }
+
     public void onFrame(Controller controller) {
-        Frame frame = controller.frame();
+        Frame frame = controller.frame(); //Gets the most recent frame
         HandList hands = frame.hands();
         assignHands(hands);
 
@@ -29,33 +42,37 @@ public class ControllerListener extends Listener {
         boolean leftHandArmed = getLeftRollArming();
         int leftHandThrust = degreeConversion(getLeftThrustingPitch());
 
+        portWriter.write("1300"); //Writes to serial port
+
         try {
-            //rollDeg = readSize(rollDegrees)
-            //for (int i=0;i<len(rollDeg);i++){portWriter.WriteToPort(i, "roll");}
-            Integer intValue = 120;
-            byte byteValue = intValue.byteValue();
-            portWriter.WriteToPort(byteValue, "pitch");
-
-            System.out.println("Wrote to Port");
-
-            TimeUnit.SECONDS.sleep(1);
-//
-//            portWriter.WriteToPort(2, "pitch");
-//            portWriter.WriteToPort(56, "yaw");
-//            portWriter.WriteToPort(56, "pitch");
-//            portWriter.WriteToPort(56, "thrust");
-        } catch (IOException | InterruptedException e) {
-            //STUB
+            Thread.sleep(30); //Gives processing time for arduino
+        } catch (InterruptedException e) {
+            System.out.println("onFrame Sleep Exception: ");
+            e.printStackTrace();
         }
 
-        //System.out.println("Frame id: " + frame.id() +
-//                            ", Right hand?: " + rightHand.isRight() +
-//                            ", Hand count: " + frame.hands().count() +
-//                            ", Roll Degrees: " + rollDegrees +
-//                            ", Pitch Degrees: " + pitchDegrees +
-//                            ", Left Hand armed: " + leftHandArmed +
-//                            ", Left Hand Thrust: " + leftHandThrust
-//                            );
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            System.out.println("onFrame Sleep Exception: ");
+            e.printStackTrace();
+        }
+
+        portWriter.write("1800"); //Writes to serial port
+
+        try {
+            Thread.sleep(30); //Gives processing time for arduino
+        } catch (InterruptedException e) {
+            System.out.println("onFrame Sleep Exception: ");
+            e.printStackTrace();
+        }
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            System.out.println("onFrame Sleep Exception: ");
+            e.printStackTrace();
+        }
 
         //send position to transmitter
         ControllerTX.setAction(rollDegrees, pitchDegrees, yawDegrees, leftHandThrust, leftHandArmed);

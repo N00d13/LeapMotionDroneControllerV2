@@ -16,8 +16,8 @@ volatile uint16_t PpmIn[NO_OF_PPM_CHANNELS]; //Array that holds servo values for
 
 void setup()
 {
-  Serial.begin(9600); //Begins serial
-  Serial.println("SERIAL OPENED");
+  Serial.begin(38400); //Begins serial
+  //Serial.println("SERIAL OPENED");
 
 
   //Initialize all channels with default value
@@ -46,7 +46,7 @@ void setup()
     //stub
   }
 
-  Serial.println("SERIAL STARTED");
+  //Serial.println("SERIAL STARTED");
 
 }
 
@@ -59,40 +59,66 @@ void setup()
 */
 //test
 void loop() {
+  int dataInt;
+  if (Serial.available()) {
+    delay(20); //wait for data to arrive
+
+    String incomingData = "";
+
+    while (Serial.available()) {
+      incomingData += (char) (Serial.read());
+    }
+
+    dataInt = incomingData.toInt();
+  }
+
+  setPPM(1, dataInt);
+
+
+
+
+
+
+
+
+
+
+
+
   ////  long myInt = Serial.parseInt(SKIP_ALL, '\n');
   //  String myInt = Serial.readString();
   //  Serial.println("the parsed int is: " );
   //  Serial.println(myInt);
-  String myString;
-  //  delay(500);
+  //  String myString;
+  //  //  delay(500);
+  //
+  //  //Serial.write("120\n");
+  //
+  //  while (Serial.available() >= 1) { //If there is something to read
+  //    int writeValueInt = 127;
+  //    Serial.write(writeValueInt);
+  //
+  //    char c = Serial.read();
+  //    myString += c;
+  //    Serial.write(" ");
+  //  }
+  //
+  //  Serial.println("String is: " + myString);
+  //
+  //  delay(100);
+  //
+  //  int newInt = myString.toInt();
+  //  newInt += 1700;
+  //
+  //  if (newInt > 1815 && newInt < 1821) {
+  //    setPPM(1, 1700); //Test code
+  //  } else {
+  //    //setPPM(1, 1200); //Test code
+  //  }
 
-  //Serial.write("120\n");
-
-  while (Serial.available() >= 1) { //If there is something to read
-    int writeValueInt = 127;
-    Serial.write(writeValueInt);
-    
-    char c = Serial.read();
-    myString += c;
-    Serial.write(" ");
-  }
-
-  Serial.println("String is: " + myString);
-
-  delay(100);
-  
-  int newInt = myString.toInt();
-  newInt += 1700;
-
-  if (newInt > 1815 && newInt < 1821) {
-    setPPM(1, 1700); //Test code
-  } else {
-    //setPPM(1, 1200); //Test code
-  }
 
 
- 
- 
+
 
 }
 

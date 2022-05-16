@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08ef8207-fe99-496b-b82a-efd1864744a4" name="Changes" comment="MidUpdate Serial Fix">
+    <list default="true" id="08ef8207-fe99-496b-b82a-efd1864744a4" name="Changes" comment="Base for new Serial COM Setup">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/slf4j_simple_1_7_25.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LeapMotionDroneControllerV2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LeapMotionDroneControllerV2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jSerialComm_2_9_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/LeapMotionDroneControllerV2.ino" beforeDir="false" afterPath="$PROJECT_DIR$/LeapMotionDroneControllerV2.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libraries/JSerialComm/jSerialComm-2.9.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/.idea/LeapMotionDroneControllerV2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/.idea/LeapMotionDroneControllerV2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/LeapMotionDroneControllerV2.ino" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/LeapMotionDroneControllerV2.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/ControllerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/ControllerListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/ControllerTX.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/ControllerTX.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/SerialPortWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/SerialPortWriter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/ui/LeapMotionControllerApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/ui/LeapMotionControllerApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/model/ControllerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/ControllerListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/model/SerialPortWrite.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/model/SerialPortWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/SerialPortWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/LeapMotionControllerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/LeapMotionControllerApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="29211PZZx6EbZ6XmMiCLEx7ZomV" />
   <component name="ProjectViewState">
@@ -27,7 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Libraries/JSerialComm/jSerialComm-2.9.1.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Libraries/JSSC/slf4j-simple-1.7.25.jar" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -130,7 +158,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652565508438</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="MidUpdate Serial Fix">
+      <created>1652653860390</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1652653860390</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Base for new Serial COM Setup">
+      <created>1652731625838</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1652731625838</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,6 +197,7 @@
     <MESSAGE value="Test Commit" />
     <MESSAGE value="Updated File organization" />
     <MESSAGE value="MidUpdate Serial Fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="MidUpdate Serial Fix" />
+    <MESSAGE value="Base for new Serial COM Setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base for new Serial COM Setup" />
   </component>
 </project>

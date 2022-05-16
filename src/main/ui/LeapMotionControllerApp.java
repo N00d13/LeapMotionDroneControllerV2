@@ -2,6 +2,8 @@ package main.ui;
 
 import com.leapmotion.leap.Controller;
 import main.model.ControllerListener;
+import main.model.SerialPortWriter;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -21,9 +23,14 @@ public class LeapMotionControllerApp {
 
     private void init() {
         input = new Scanner(System.in);
-        listener = new ControllerListener();
-        controller = new Controller();
-        controller.addListener(listener);
+
+        SerialPortWriter portWriter = new SerialPortWriter(); //Creates Serial Port
+        portWriter.connect("COM6", 38400, 8, 1, 0); //Initializes serial port TODO: Change COM port to correct Arduino COM port
+
+        listener = new ControllerListener(portWriter); //Creates controller listener
+
+        controller = new Controller(); //Sets up controller
+        controller.addListener(listener); //adds listener to controller
     }
 
     private void welcomeStatement() {
