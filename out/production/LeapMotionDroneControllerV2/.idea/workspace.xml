@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08ef8207-fe99-496b-b82a-efd1864744a4" name="Changes" comment="Fixed Serial Communication">
-      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/ControllerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/ControllerListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/ControllerTX.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/ControllerTX.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/ui/LeapMotionControllerApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/ui/LeapMotionControllerApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/model/ControllerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/ControllerListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/model/ControllerTX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/ControllerTX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/LeapMotionControllerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/LeapMotionControllerApp.java" afterDir="false" />
+    <list default="true" id="08ef8207-fe99-496b-b82a-efd1864744a4" name="Changes" comment="Restructured Code">
+      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/LeapMotionDroneControllerV2.ino" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/LeapMotionDroneControllerV2.ino" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652735825020</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Restructured Code">
+      <created>1652742777610</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1652742777610</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +198,7 @@
     <MESSAGE value="MidUpdate Serial Fix" />
     <MESSAGE value="Base for new Serial COM Setup" />
     <MESSAGE value="Fixed Serial Communication" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Serial Communication" />
+    <MESSAGE value="Restructured Code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restructured Code" />
   </component>
 </project>

@@ -62,7 +62,8 @@ public class ControllerListener extends Listener {
         System.out.println("Controller initialized");
     }
 
-    public void onConnect(Controller controller) {System.out.println("Controller is connected");}
+    public void onConnect(Controller controller) {
+        System.out.println("Controller is connected");}
 
     public void onDisconnect(Controller controller) {
         System.out.println("Controller is disconnected");
