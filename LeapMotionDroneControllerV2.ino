@@ -59,29 +59,32 @@ void setup()
 */
 //test
 void loop() {
-  int dataInt;
+  String incomingData = "";
   if (Serial.available()) {
     delay(20); //wait for data to arrive
-
-    String incomingData = "";
-
     while (Serial.available()) {
       incomingData += (char) (Serial.read());
     }
-
-    dataInt = incomingData.toInt();
   }
 
-  setPPM(1, dataInt);
+  int dataLength = incomingData.length() + 1;
+  char dataChar[dataLength];
+  incomingData.toCharArray(dataChar, dataLength);
 
-}
+  int c1, c2, c3, c4;
 
+  if (sscanf(dataChar, "%d,%d,%d,%d", &c1, &c2, &c3, &c4) == 4) {
 
-int ChannelShift(int value) {
-  value += 125;
-  value *= 3.33;
-  value += 1000;
-  return value;
+    setPPM(1, c1);
+    delay(500);
+    setPPM(1, c2);
+    delay(500);
+    setPPM(1, c3);
+    delay(500);
+    setPPM(1, c4);
+    delay(500);
+  }
+
 }
 
 

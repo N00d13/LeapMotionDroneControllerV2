@@ -25,7 +25,8 @@ public class ControllerListener extends Listener {
         boolean leftHandArmed = leapMotionTX.getLeftRollArming();
         float leftHandThrust = leapMotionTX.ChannelShift(leapMotionTX.getLeftThrustingPitch(), "LT");
 
-        portWriter.write("1300, 1200, 1700, 2000"); //Writes to serial port
+        portWriter.write("1300,1200,1700,2000"); //Writes to serial port
+        System.out.println("Wrote to Port");
 
         try {
             Thread.sleep(30); //Gives processing time for arduino

@@ -59,21 +59,55 @@ void setup()
 */
 //test
 void loop() {
-  int dataInt;
+  String incomingData = "";
   if (Serial.available()) {
     delay(20); //wait for data to arrive
-
-    String incomingData = "";
 
     while (Serial.available()) {
       incomingData += (char) (Serial.read());
     }
 
-    dataInt = incomingData.toInt();
   }
 
-  setPPM(1, dataInt);
+  int dataLength = incomingData.length() + 1;
+  char dataChar[dataLength];
+  incomingData.toCharArray(dataChar, dataLength);
 
+
+  //char testString[] = "1300,1200,1700,2000";
+  int c1, c2, c3, c4;
+
+  if (sscanf(dataChar, "%d,%d,%d,%d", &c1, &c2, &c3, &c4) == 4){
+//     Serial.println(c1);
+//     Serial.println(c2);
+//     Serial.println(c3);
+//     Serial.println(c4);
+     setPPM(1, c1);
+     delay(500);
+     setPPM(1, c2);
+     delay(500);
+     setPPM(1, c3);
+     delay(500);
+     setPPM(1, c4);
+     delay(500);
+  }
+//  char* channelLevels;
+//  channelLevels = strtok(testString, ",");
+//
+//  while (channelLevels != NULL) {
+//    char currChannelChar;
+//    for(int i = 0; i < 4; i++) {
+//      currChannelChar += *(channelLevels + i);
+//    }
+//    
+//    int currLevel = currChannelChar - '0';
+
+//    Serial.println(currLevel);
+//    
+
+//    channelLevels = strtok(NULL, ",");
+    //delay(1000);
+//  }
 }
 
 
