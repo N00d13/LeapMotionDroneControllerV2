@@ -19,11 +19,11 @@ public class ControllerListener extends Listener {
         HandList hands = frame.hands();
         leapMotionTX.assignHands(hands);
 
-        float rollDegrees = leapMotionTX.getRightRollDegrees();
-        float pitchDegrees = leapMotionTX.getRightPitchDegrees();
+        float rollDegrees = leapMotionTX.ChannelShift(leapMotionTX.getRightRollDegrees(), "RR");
+        float pitchDegrees = leapMotionTX.ChannelShift(leapMotionTX.getRightPitchDegrees(), "RP");
         float yawDegrees = leapMotionTX.getRightYawDegrees();
         boolean leftHandArmed = leapMotionTX.getLeftRollArming();
-        float leftHandThrust = leapMotionTX.getLeftThrustingPitch();
+        float leftHandThrust = leapMotionTX.ChannelShift(leapMotionTX.getLeftThrustingPitch(), "LT");
 
         portWriter.write("1300"); //Writes to serial port
 
@@ -72,5 +72,4 @@ public class ControllerListener extends Listener {
     public void onExit(Controller controller){
         System.out.println("Controller is disconnected");
     }
-
 }

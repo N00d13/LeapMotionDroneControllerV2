@@ -111,5 +111,26 @@ public class LeapMotionTX {
         }
     }
 
-
+    public int ChannelShift(float value, String channel){
+        //channel shift for right roll
+        if (channel == "RR"){
+            value += 180;
+            value *= (100/36);
+            value += 1000;
+            return (int) value;
+        }
+        //channel shift for right pitch
+        else if (channel == "RP"){
+            value += 90;
+            value *= (100/18);
+            value += 1000;
+            return (int) value;
+        }
+        //channel shift for left thrust
+        else{
+            value *= (1000/90);
+            value += 1000;
+            return (int) value;
+        }
+    }
 }
