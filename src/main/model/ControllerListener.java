@@ -25,33 +25,10 @@ public class ControllerListener extends Listener {
         boolean leftHandArmed = leapMotionTX.getLeftRollArming();
         float leftHandThrust = leapMotionTX.ChannelShift(leapMotionTX.getLeftThrustingPitch(), "LT");
 
-        portWriter.write("1300"); //Writes to serial port
+        portWriter.write("1300, 1200, 1700, 2000"); //Writes to serial port
 
         try {
             Thread.sleep(30); //Gives processing time for arduino
-        } catch (InterruptedException e) {
-            System.out.println("onFrame Sleep Exception: ");
-            e.printStackTrace();
-        }
-
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            System.out.println("onFrame Sleep Exception: ");
-            e.printStackTrace();
-        }
-
-        portWriter.write("1800"); //Writes to serial port
-
-        try {
-            Thread.sleep(30); //Gives processing time for arduino
-        } catch (InterruptedException e) {
-            System.out.println("onFrame Sleep Exception: ");
-            e.printStackTrace();
-        }
-
-        try {
-            Thread.sleep(1000);
         } catch (InterruptedException e) {
             System.out.println("onFrame Sleep Exception: ");
             e.printStackTrace();
