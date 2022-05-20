@@ -27,13 +27,22 @@ public class LeapMotionTX {
         }
     }
 
-    // Returns the roll degrees between -180 and 180 for the right hand
+    // Returns the roll degrees between -90 and 90 for the right hand
     // Rolling right is positive and left is negative
     // Returns -1 if right hand isn't available
     public float getRightRollDegrees() {
         if (rightHand.isRight()) {
             float rollVector = rightHand.palmNormal().roll();
             float rollDegrees = rollVector * (float) (180/Math.PI);
+
+            if (rollDegrees < -90) {
+                rollDegrees = -90;
+            } else if (rollDegrees > 90) {
+                rollDegrees = 90;
+            }
+
+            System.out.println(-1 * rollDegrees);
+
             return (-1 * rollDegrees);
         }
         return -1;
@@ -49,6 +58,13 @@ public class LeapMotionTX {
             float pitchVector = rightHand.palmNormal().pitch();
             float pitchDegrees = pitchVector * (float) (180/Math.PI);
             pitchDegrees = pitchConversion(pitchDegrees);
+
+            if (pitchDegrees < -60) {
+                pitchDegrees = -60;
+            } else if (pitchDegrees > 60) {
+                pitchDegrees = 60;
+            }
+
             return pitchDegrees;
         }
         return -1;
@@ -74,14 +90,17 @@ public class LeapMotionTX {
     public float getLeftThrustingPitch() {
         if (leftHand.isLeft()) {
             float pitchVector = leftHand.palmNormal().pitch();
-            float pitchDegrees = pitchVector * (float) (180/Math.PI);
+            float thrustingDegrees = pitchVector * (float) (180/Math.PI);
 
-            pitchDegrees = pitchConversion(pitchDegrees);
+            thrustingDegrees = pitchConversion(thrustingDegrees);
 
-            if (pitchDegrees < 0) {
-                pitchDegrees = 0;
+            if (thrustingDegrees < 0) {
+                thrustingDegrees = 0;
+            } else if (thrustingDegrees > 90) {
+                thrustingDegrees = 90;
             }
-            return pitchDegrees;
+
+            return thrustingDegrees;
         }
         return -1;
     }
@@ -114,23 +133,25 @@ public class LeapMotionTX {
     public int ChannelShift(float value, String channel){
         //channel shift for right roll
         if (channel == "RR"){
-            value += 180;
-            value *= (100/36);
+            value += 90.0;
+            value *= 5.56; //Value of 100/18
             value += 1000;
+
             return (int) value;
         }
         //channel shift for right pitch
         else if (channel == "RP"){
-            value += 90;
-            value *= (100/18);
+            value += 60;
+            value *= 8.33; //Value of 100/12
             value += 1000;
             return (int) value;
         }
         //channel shift for left thrust
-        else{
-            value *= (1000/90);
+        else if (channel == "LT"){
+            value *= 11.11; //Value of 1000/90
             value += 1000;
             return (int) value;
         }
+        return -1;
     }
 }

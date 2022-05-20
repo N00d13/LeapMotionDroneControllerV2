@@ -71,18 +71,12 @@ void loop() {
   char dataChar[dataLength];
   incomingData.toCharArray(dataChar, dataLength);
 
-  int c1, c2, c3, c4;
+  int pitch, roll, thrust;
 
-  if (sscanf(dataChar, "%d,%d,%d,%d", &c1, &c2, &c3, &c4) == 4) {
-
-    setPPM(1, c1);
-    delay(500);
-    setPPM(1, c2);
-    delay(500);
-    setPPM(1, c3);
-    delay(500);
-    setPPM(1, c4);
-    delay(500);
+  if (sscanf(dataChar, "%d,%d,%d", &pitch, &roll, &thrust) == 3) {
+    setPPM(1, thrust);
+    setPPM(2, roll);
+    setPPM(3, pitch);
   }
 
 }

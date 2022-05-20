@@ -19,17 +19,13 @@ public class ControllerListener extends Listener {
         HandList hands = frame.hands();
         leapMotionTX.assignHands(hands);
 
-        float rollDegrees = leapMotionTX.ChannelShift(leapMotionTX.getRightRollDegrees(), "RR");
-        float pitchDegrees = leapMotionTX.ChannelShift(leapMotionTX.getRightPitchDegrees(), "RP");
-        float leftHandThrust = leapMotionTX.ChannelShift(leapMotionTX.getLeftThrustingPitch(), "LT");
+        int rollDegrees = leapMotionTX.ChannelShift(leapMotionTX.getRightRollDegrees(), "RR");
+        int pitchDegrees = leapMotionTX.ChannelShift(leapMotionTX.getRightPitchDegrees(), "RP");
+        int leftHandThrust = leapMotionTX.ChannelShift(leapMotionTX.getLeftThrustingPitch(), "LT");
 //        boolean leftHandArmed = leapMotionTX.getLeftRollArming();
 //        float yawDegrees = leapMotionTX.getRightYawDegrees();
 
-        System.out.println(rollDegrees);
-        System.out.println(pitchDegrees);
-        System.out.println(leftHandThrust);
-
-        portWriter.write("1300,1200,1700,2000"); //Writes to serial port
+        portWriter.write(pitchDegrees + "," + rollDegrees + "," + leftHandThrust ); //Writes to serial port
         System.out.println("Wrote to Port");
 
         try {
