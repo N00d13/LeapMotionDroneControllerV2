@@ -21,9 +21,13 @@ public class ControllerListener extends Listener {
 
         float rollDegrees = leapMotionTX.ChannelShift(leapMotionTX.getRightRollDegrees(), "RR");
         float pitchDegrees = leapMotionTX.ChannelShift(leapMotionTX.getRightPitchDegrees(), "RP");
-        float yawDegrees = leapMotionTX.getRightYawDegrees();
-        boolean leftHandArmed = leapMotionTX.getLeftRollArming();
         float leftHandThrust = leapMotionTX.ChannelShift(leapMotionTX.getLeftThrustingPitch(), "LT");
+//        boolean leftHandArmed = leapMotionTX.getLeftRollArming();
+//        float yawDegrees = leapMotionTX.getRightYawDegrees();
+
+        System.out.println(rollDegrees);
+        System.out.println(pitchDegrees);
+        System.out.println(leftHandThrust);
 
         portWriter.write("1300,1200,1700,2000"); //Writes to serial port
         System.out.println("Wrote to Port");

@@ -62,60 +62,29 @@ void loop() {
   String incomingData = "";
   if (Serial.available()) {
     delay(20); //wait for data to arrive
-
     while (Serial.available()) {
       incomingData += (char) (Serial.read());
     }
-
   }
 
   int dataLength = incomingData.length() + 1;
   char dataChar[dataLength];
   incomingData.toCharArray(dataChar, dataLength);
 
-
-  //char testString[] = "1300,1200,1700,2000";
   int c1, c2, c3, c4;
 
-  if (sscanf(dataChar, "%d,%d,%d,%d", &c1, &c2, &c3, &c4) == 4){
-//     Serial.println(c1);
-//     Serial.println(c2);
-//     Serial.println(c3);
-//     Serial.println(c4);
-     setPPM(1, c1);
-     delay(500);
-     setPPM(1, c2);
-     delay(500);
-     setPPM(1, c3);
-     delay(500);
-     setPPM(1, c4);
-     delay(500);
+  if (sscanf(dataChar, "%d,%d,%d,%d", &c1, &c2, &c3, &c4) == 4) {
+
+    setPPM(1, c1);
+    delay(500);
+    setPPM(1, c2);
+    delay(500);
+    setPPM(1, c3);
+    delay(500);
+    setPPM(1, c4);
+    delay(500);
   }
-//  char* channelLevels;
-//  channelLevels = strtok(testString, ",");
-//
-//  while (channelLevels != NULL) {
-//    char currChannelChar;
-//    for(int i = 0; i < 4; i++) {
-//      currChannelChar += *(channelLevels + i);
-//    }
-//    
-//    int currLevel = currChannelChar - '0';
 
-//    Serial.println(currLevel);
-//    
-
-//    channelLevels = strtok(NULL, ",");
-    //delay(1000);
-//  }
-}
-
-
-int ChannelShift(int value) {
-  value += 125;
-  value *= 3.33;
-  value += 1000;
-  return value;
 }
 
 
