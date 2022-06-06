@@ -74,11 +74,24 @@ public class LeapMotionTX {
     // Hand facing forward is 0 degrees
     // Yaw right gives value between 0 to 180 (drone faces right)
     // Yaw facing left gives value between -180 to 0
-    public float getRightYawDegrees(){
-        if (rightHand.isRight()) {
-            float yawVector = rightHand.palmNormal().yaw();
-            return yawVector * (float) (180 / Math.PI);
+    public float getLeftYawDegrees(){
+
+        if (leftHand.isLeft()) {
+            float yawVector = leftHand.palmNormal().pitch();
+            float yawDegrees = yawVector * (float) (180/Math.PI);
+            yawDegrees = pitchConversion(yawDegrees);
+
+            if (yawDegrees < -45) {
+                yawDegrees = -45;
+            } else if (yawDegrees > 45) {
+                yawDegrees = 45;
+            }
+
+            System.out.println("Yaw degrees: " + yawDegrees);
+
+            return yawDegrees;
         }
+
         return -1;
     }
 

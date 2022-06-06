@@ -1,9 +1,0 @@
-<changelist name="Uncommitted_changes_before_Update_at_2022-05-11_2_55_p_m__[Changes]1" date="1652306142181" recycled="true" deleted="true">
-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-05-11_2_55_p_m__[Changes]1/shelved.patch" />
-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2022-05-11 2:55 p.m. [Changes]" />
-  <binary>
-    <option name="BEFORE_PATH" value="out/production/LeapMotionDroneControllerV2/main/model/ControllerListener.class" />
-    <option name="AFTER_PATH" value="out/production/LeapMotionDroneControllerV2/main/model/ControllerListener.class" />
-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-05-11_2_55_p_m__[Changes]1/ControllerListener.class" />
-  </binary>
-</changelist>
