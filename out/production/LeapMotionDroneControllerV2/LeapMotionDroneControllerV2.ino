@@ -71,7 +71,7 @@ void loop() {
   char dataChar[dataLength];
   incomingData.toCharArray(dataChar, dataLength);
 
-  int pitch, roll, thrust;
+  int pitch, roll, thrust, yaw;
 
   if (sscanf(dataChar, "%d,%d,%d", &pitch, &roll, &thrust) == 3) {
     setPPM(1, thrust);
