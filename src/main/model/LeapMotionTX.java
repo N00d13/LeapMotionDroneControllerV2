@@ -35,10 +35,10 @@ public class LeapMotionTX {
             float rollVector = rightHand.palmNormal().roll();
             float rollDegrees = rollVector * (float) (180/Math.PI);
 
-            if (rollDegrees < -90) {
-                rollDegrees = -90;
-            } else if (rollDegrees > 90) {
-                rollDegrees = 90;
+            if (rollDegrees < -45) {
+                rollDegrees = -45;
+            } else if (rollDegrees > 45) {
+                rollDegrees = 45;
             }
 
             System.out.println(-1 * rollDegrees);
@@ -59,10 +59,10 @@ public class LeapMotionTX {
             float pitchDegrees = pitchVector * (float) (180/Math.PI);
             pitchDegrees = pitchConversion(pitchDegrees);
 
-            if (pitchDegrees < -60) {
-                pitchDegrees = -60;
-            } else if (pitchDegrees > 60) {
-                pitchDegrees = 60;
+            if (pitchDegrees < -45) {
+                pitchDegrees = -45;
+            } else if (pitchDegrees > 45) {
+                pitchDegrees = 45;
             }
 
             return pitchDegrees;
