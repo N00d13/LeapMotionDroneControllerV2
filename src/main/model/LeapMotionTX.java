@@ -133,22 +133,21 @@ public class LeapMotionTX {
     public int ChannelShift(float value, String channel){
         //channel shift for right roll
         if (channel == "RR"){
-            value += 90.0;
-            value *= 5.56; //Value of 100/18
+            value += 45.0;
+            value *= 11.11; //Value of 100/9
             value += 1000;
-
             return (int) value;
         }
         //channel shift for right pitch
         else if (channel == "RP"){
-            value += 60;
-            value *= 8.33; //Value of 100/12
+            value += 45.0;
+            value *= 11.11; //Value of 100/9
             value += 1000;
             return (int) value;
         }
         //channel shift for left thrust
         else if (channel == "LT"){
-            value *= 11.11; //Value of 1000/90
+            value *= 11.11; //Value of 100/9
             value += 1000;
             return (int) value;
         }
