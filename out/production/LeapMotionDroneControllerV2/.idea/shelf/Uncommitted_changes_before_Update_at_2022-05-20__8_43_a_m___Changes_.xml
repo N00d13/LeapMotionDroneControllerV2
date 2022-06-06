@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_2022-05-20,_8_43_a_m__[Changes]" date="1653061389730" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-05-20,_8_43_a_m__[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2022-05-20, 8:43 a.m. [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/LeapMotionDroneControllerV2/main/model/SerialPortWriter.class" />
+    <option name="AFTER_PATH" value="out/production/LeapMotionDroneControllerV2/main/model/SerialPortWriter.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-05-20,_8_43_a_m__[Changes]/SerialPortWriter.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/LeapMotionDroneControllerV2/main/model/ControllerListener.class" />
+    <option name="AFTER_PATH" value="out/production/LeapMotionDroneControllerV2/main/model/ControllerListener.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-05-20,_8_43_a_m__[Changes]/ControllerListener.class" />
+  </binary>
+</changelist>
