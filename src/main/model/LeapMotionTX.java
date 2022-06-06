@@ -164,6 +164,13 @@ public class LeapMotionTX {
             value += 1000;
             return (int) value;
         }
+        //channel shift for left yaw
+        else if (channel == "LY"){
+            value += 45.0;
+            value *= 11.11; //Value of 100/9
+            value += 1000;
+            return (int) value;
+        }
         return -1;
     }
 }
