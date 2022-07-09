@@ -27,23 +27,38 @@ public class LeapMotionTX {
         }
     }
 
+    // Returns true if both hands are available, otherwise returns false
+    public boolean HandsAvailable() {
+
+        if ((leftHand != null && rightHand != null) && (leftHand.isValid() && rightHand.isValid())) { //
+            return true;
+        }
+        return false;
+    }
+
     // Returns the roll degrees between -90 and 90 for the right hand
     // Rolling right is positive and left is negative
     // Returns -1 if right hand isn't available
     public float getRightRollDegrees() {
         if (rightHand.isRight()) {
             float rollVector = rightHand.palmNormal().roll();
-            float rollDegrees = rollVector * (float) (180/Math.PI);
 
-            if (rollDegrees < -45) {
+            //System.out.println(rollVector);
+
+            float rollDegrees = rollVector * (float) (180/Math.PI);
+            rollDegrees *= -1;
+
+            //System.out.println( rollDegrees);
+
+            if (rollDegrees < -45 || (rollDegrees > 100 && rollDegrees < 150)) {
                 rollDegrees = -45;
             } else if (rollDegrees > 45) {
                 rollDegrees = 45;
             }
 
-            System.out.println(-1 * rollDegrees);
+            System.out.println( rollDegrees);
 
-            return (-1 * rollDegrees);
+            return (rollDegrees);
         }
         return -1;
     }
@@ -58,6 +73,8 @@ public class LeapMotionTX {
             float pitchVector = rightHand.palmNormal().pitch();
             float pitchDegrees = pitchVector * (float) (180/Math.PI);
             pitchDegrees = pitchConversion(pitchDegrees);
+
+            //System.out.println("Pitch Degrees: " + pitchDegrees);
 
             if (pitchDegrees < -45) {
                 pitchDegrees = -45;
@@ -75,23 +92,20 @@ public class LeapMotionTX {
     // Yaw right gives value between 0 to 180 (drone faces right)
     // Yaw facing left gives value between -180 to 0
     public float getLeftYawDegrees(){
-
         if (leftHand.isLeft()) {
-            float yawVector = leftHand.palmNormal().pitch();
+            float yawVector = leftHand.palmNormal().roll();
             float yawDegrees = yawVector * (float) (180/Math.PI);
-            yawDegrees = pitchConversion(yawDegrees);
 
-            if (yawDegrees < -45) {
+            if (yawDegrees < -45 || (yawDegrees > 100 && yawDegrees < 150)) {
                 yawDegrees = -45;
             } else if (yawDegrees > 45) {
                 yawDegrees = 45;
             }
 
-            System.out.println("Yaw degrees: " + yawDegrees);
+            //System.out.println(-1 * rollDegrees);
 
-            return yawDegrees;
+            return (-1 * yawDegrees);
         }
-
         return -1;
     }
 
@@ -173,4 +187,6 @@ public class LeapMotionTX {
         }
         return -1;
     }
+
+
 }

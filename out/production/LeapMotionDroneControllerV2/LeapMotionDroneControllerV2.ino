@@ -73,10 +73,11 @@ void loop() {
 
   int pitch, roll, thrust, yaw;
 
-  if (sscanf(dataChar, "%d,%d,%d", &pitch, &roll, &thrust) == 3) {
+  if (sscanf(dataChar, "%d,%d,%d,%d", &pitch, &roll, &thrust, &yaw) == 4) {
     setPPM(1, thrust);
     setPPM(2, roll);
     setPPM(3, pitch);
+    setPPM(4, yaw);
   }
 
 }
