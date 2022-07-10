@@ -68,16 +68,11 @@ public class ControllerListener extends Listener {
 
     public void onConnect(Controller controller) {
         System.out.println("Controller is connected");
-
-        //AskCalibration();
-
+        AskCalibration();
         System.out.println("Program is starting");
-
-
     }
 
     private void AskCalibration(){
-
 
         System.out.println("Do you need to calibrate the controller for Liftoff?   y/n");
 
@@ -85,7 +80,8 @@ public class ControllerListener extends Listener {
         nextInput = input.nextLine();
 
         if (nextInput.equals("y")) {
-            StartLiftoffCalibration();
+            System.out.println("Starting Calibration");
+//            StartLiftoffCalibration();
         } else {
             System.out.println("Cancelled Calibration");
         }
@@ -95,10 +91,8 @@ public class ControllerListener extends Listener {
         System.out.println("Starting Calibration...");
         System.out.println("Press \"s\" when you click \"start calibration\" in Liftoff");
 
-
         String nextInput;
         nextInput = input.nextLine();
-
 
         //System.out.println(nextInput);
         if (nextInput.equals("s")) {
@@ -106,8 +100,6 @@ public class ControllerListener extends Listener {
         } else {
             System.out.println("Cancelled Calibration");
         }
-
-
     }
 
     private void CalibrateRotateSticks() {
@@ -121,7 +113,6 @@ public class ControllerListener extends Listener {
             e.printStackTrace();
         }
     }
-
 
     public void onDisconnect(Controller controller) {
         System.out.println("Controller is disconnected");
