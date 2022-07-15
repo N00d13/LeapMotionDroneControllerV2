@@ -9,6 +9,7 @@ public class LeapMotionTX {
 
     public LeapMotionTX(){
         leftHand = null;
+        leftHand = null;
         rightHand= null;
     };
 
@@ -176,6 +177,9 @@ public class LeapMotionTX {
         else if (channel == "LT"){
             value *= 11.11; //Value of 100/9
             value += 1000;
+            if (value > 1200){
+                value = 1200;
+            }
             return (int) value;
         }
         //channel shift for left yaw
@@ -187,6 +191,4 @@ public class LeapMotionTX {
         }
         return -1;
     }
-
-
 }
