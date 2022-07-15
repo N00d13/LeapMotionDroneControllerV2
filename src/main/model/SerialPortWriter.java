@@ -6,7 +6,7 @@ import jssc.SerialPortException;
 
 // Sends hand channel information to the Arduino COM port whenever updated.
 public class SerialPortWriter implements SerialPortEventListener {
-    private SerialPort sp; // Port writer object for Arduino COM port
+    private SerialPort sp; // Port writer object for Arduino COM port.
 
     // EFFECT: If new information is received in the serial COM port then prints the byte count.
     public void serialEvent(SerialPortEvent event) {
@@ -38,9 +38,9 @@ public class SerialPortWriter implements SerialPortEventListener {
         }
     }
 
-    // MODIFIES: this
+    // MODIFIES: this.
     // EFFECT: Disconnects the serial COM port when not in use.
-    //Disconnects COM port after not in use
+    // Disconnects COM port after not in use.
     public void disconnect() {
         try {
             sp.closePort();
@@ -50,8 +50,8 @@ public class SerialPortWriter implements SerialPortEventListener {
         }
     }
 
-    // MODIFIES: this
-    // EFFECT: Writes information to serial COM port
+    // MODIFIES: this.
+    // EFFECT: Writes information to serial COM port.
     public void write(String text) {
         try {
             sp.writeBytes(text.getBytes());
@@ -60,6 +60,5 @@ public class SerialPortWriter implements SerialPortEventListener {
             e.printStackTrace();
         }
     }
-
 
 }

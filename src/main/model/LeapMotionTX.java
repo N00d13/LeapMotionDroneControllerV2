@@ -33,8 +33,7 @@ public class LeapMotionTX {
 
     // EFFECT: Returns true if both hands are available, otherwise returns false.
     public boolean HandsAvailable() {
-
-        if ((leftHand != null && rightHand != null) && (leftHand.isValid() && rightHand.isValid())) { //
+        if ((leftHand != null && rightHand != null) && (leftHand.isValid() && rightHand.isValid())) {
             return true;
         }
         return false;

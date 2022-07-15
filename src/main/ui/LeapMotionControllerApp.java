@@ -8,6 +8,7 @@ import main.model.SerialPortWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
+// LeapMotion hand controller application
 public class LeapMotionControllerApp {
     private ControllerListener listener;
     private Controller controller;
