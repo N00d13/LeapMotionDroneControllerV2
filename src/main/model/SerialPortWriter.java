@@ -4,12 +4,12 @@ import jssc.SerialPortEvent;
 import jssc.SerialPortEventListener;
 import jssc.SerialPortException;
 
+// Sends hand channel information to the Arduino COM port whenever updated.
 public class SerialPortWriter implements SerialPortEventListener {
-    private SerialPort sp;
+    private SerialPort sp; // Port writer object for Arduino COM port
 
-    //called every time new information received from port and print to user's screen
+    // EFFECT: If new information is received in the serial COM port then prints the byte count.
     public void serialEvent(SerialPortEvent event) {
-        //checks if data is available
         if (event.isRXCHAR() && event.getEventValue() > 0) {
             try{
                 int bytesCount = event.getEventValue();
@@ -23,11 +23,12 @@ public class SerialPortWriter implements SerialPortEventListener {
         }
     }
 
-    //Connects and sets up new COM port
+    // MODIFIES: this.
+    // EFFECT: Initializes the serial COM port.
     public void connect(String ComAddress, int baudRate, int dataBits, int stopBits, int parity) {
         try {
-            sp = new SerialPort(ComAddress); //Sets up new serial port on correct COM port
-            sp.openPort(); //Opens port
+            sp = new SerialPort(ComAddress);
+            sp.openPort();
             sp.setParams(baudRate, dataBits, stopBits, parity);
             sp.addEventListener(new SerialPortWriter());
 
@@ -37,6 +38,8 @@ public class SerialPortWriter implements SerialPortEventListener {
         }
     }
 
+    // MODIFIES: this
+    // EFFECT: Disconnects the serial COM port when not in use.
     //Disconnects COM port after not in use
     public void disconnect() {
         try {
@@ -47,7 +50,8 @@ public class SerialPortWriter implements SerialPortEventListener {
         }
     }
 
-    //Write string text to serial port
+    // MODIFIES: this
+    // EFFECT: Writes information to serial COM port
     public void write(String text) {
         try {
             sp.writeBytes(text.getBytes());

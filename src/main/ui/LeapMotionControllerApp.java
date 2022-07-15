@@ -28,7 +28,7 @@ public class LeapMotionControllerApp {
         String port = getPort();
 
         SerialPortWriter portWriter = new SerialPortWriter(); //Creates Serial Port
-        portWriter.connect(port, 38400, 8, 1, 0); //Initializes serial port TODO: Change COM port to correct Arduino COM port
+        portWriter.connect(port, 38400, 8, 1, 0);
 
         listener = new ControllerListener(portWriter); //Creates controller listener
 
@@ -43,7 +43,7 @@ public class LeapMotionControllerApp {
         if (!controller.isConnected()){
             System.out.println("Your controller isn't connected, please connect your controller or restart the program");
             while ( !controller.isConnected()) {
-                // Wait until controller is connected
+                // Polling until controller is connected
             }
         }
 
