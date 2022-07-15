@@ -4,39 +4,39 @@ import com.leapmotion.leap.Controller;
 import jssc.SerialPortList;
 import main.model.ControllerListener;
 import main.model.SerialPortWriter;
-
 import java.io.IOException;
-import java.util.Scanner;
 
-// LeapMotion hand controller application
+// LeapMotion hand controller application.
 public class LeapMotionControllerApp {
-    private ControllerListener listener;
-    private Controller controller;
-    private Scanner input;
+    private ControllerListener listener; // Listener object for controller object.
+    private Controller controller; // LeapMotion controller object.
 
+    // EFFECT: Runs the application.
     public LeapMotionControllerApp() {
         runLeapMotionControllerApp();
     }
 
+    // EFFECT: Initializes application and states welcome statement.
     private void runLeapMotionControllerApp() {
         init();
         welcomeStatement();
     }
 
+    // MODIFIES: this.
+    // EFFECT: Sets up the listener and controller object with the correct serial COM port.
     private void init() {
-        input = new Scanner(System.in);
-
         String port = getPort();
 
-        SerialPortWriter portWriter = new SerialPortWriter(); //Creates Serial Port
+        SerialPortWriter portWriter = new SerialPortWriter();
         portWriter.connect(port, 38400, 8, 1, 0);
 
-        listener = new ControllerListener(portWriter); //Creates controller listener
+        listener = new ControllerListener(portWriter);
 
-        controller = new Controller(); //Sets up controller
-        controller.addListener(listener); //adds listener to controller
+        controller = new Controller();
+        controller.addListener(listener);
     }
 
+    // EFFECT: States the welcome statements and waits for the controller to be connected.
     private void welcomeStatement() {
         System.out.println("Hello, welcome to the leap motion hand controller app.");
         System.out.println("Connect your leap motion when you are ready for awesomeness");
@@ -51,7 +51,7 @@ public class LeapMotionControllerApp {
         runProgram();
     }
 
-    //Runs the program
+    // EFFECT: Runs the program to read information from the controller.
     private void runProgram(){
         listener.onFrame(controller);
         try {
@@ -62,8 +62,8 @@ public class LeapMotionControllerApp {
         controller.removeListener(listener);
     }
 
-
-    // Gets the port name of the arduino and returns it as a string
+    // REQUIRES: Arduino controller has to be connected.
+    // EFFECT: Returns the port name associated with the Arduino COM port.
     private String getPort(){
         String ourPort = "";
         for (String port : SerialPortList.getPortNames()){
