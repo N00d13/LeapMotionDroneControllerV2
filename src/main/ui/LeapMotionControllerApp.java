@@ -47,7 +47,6 @@ public class LeapMotionControllerApp {
                 // Polling until controller is connected
             }
         }
-
         runProgram();
     }
 

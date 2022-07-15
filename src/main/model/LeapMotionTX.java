@@ -96,8 +96,6 @@ public class LeapMotionTX {
                 yawDegrees = 45;
             }
 
-            //System.out.println(-1 * rollDegrees);
-
             return (-1 * yawDegrees);
         }
         return -1;
