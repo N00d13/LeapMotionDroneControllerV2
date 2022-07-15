@@ -41,7 +41,7 @@ public class LeapMotionControllerApp {
         System.out.println("Connect your leap motion when you are ready for awesomeness");
 
         if (!controller.isConnected()){
-            System.out.println("Your controller isn't connected, please connect your controller");
+            System.out.println("Your controller isn't connected, please connect your controller or restart the program");
             while ( !controller.isConnected()) {
                 // Wait until controller is connected
             }

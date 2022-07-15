@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08ef8207-fe99-496b-b82a-efd1864744a4" name="Changes" comment="Added Yaw Functionality to Arduino">
-      <change beforePath="$PROJECT_DIR$/LeapMotionDroneControllerV2.ino" beforeDir="false" afterPath="$PROJECT_DIR$/LeapMotionDroneControllerV2.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/LeapMotionDroneControllerV2.ino" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/LeapMotionDroneControllerV2.ino" afterDir="false" />
+    <list default="true" id="08ef8207-fe99-496b-b82a-efd1864744a4" name="Changes" comment="Testing calibration setup">
+      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/ControllerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/ControllerListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/LeapMotionTX.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/model/LeapMotionTX.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/ui/LeapMotionControllerApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeapMotionDroneControllerV2/main/ui/LeapMotionControllerApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/model/ControllerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/ControllerListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/model/LeapMotionTX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/LeapMotionTX.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ui/LeapMotionControllerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/LeapMotionControllerApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654536033091</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Testing calibration setup">
+      <created>1657407131484</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1657407131484</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,6 +249,8 @@
     <MESSAGE value="Controller displays proper channel levels from Leap Motion" />
     <MESSAGE value="Started Yaw Functionality" />
     <MESSAGE value="Added Yaw Functionality to Arduino" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Yaw Functionality to Arduino" />
+    <MESSAGE value="Testing callibration setup" />
+    <MESSAGE value="Testing calibration setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing calibration setup" />
   </component>
 </project>

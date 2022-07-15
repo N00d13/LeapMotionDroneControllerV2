@@ -16,6 +16,8 @@ public class ControllerListener extends Listener {
     private int leftHandThrust;
     private int yawDegrees;
 
+    private boolean doneSetup = false;
+
     //Constructor
     public ControllerListener(SerialPortWriter portWriter) {
         this.portWriter = portWriter;
@@ -28,7 +30,6 @@ public class ControllerListener extends Listener {
         HandList hands = frame.hands();
         leapMotionTX.assignHands(hands);
 
-        System.out.println(leapMotionTX.HandsAvailable());
 
         if (leapMotionTX.HandsAvailable()) {
             AssignChannelValues(true);
@@ -38,7 +39,6 @@ public class ControllerListener extends Listener {
 
         portWriter.write(pitchDegrees + "," + rollDegrees + "," + leftHandThrust + "," + yawDegrees); //Writes to serial port
 
-        System.out.println("Wrote to Transmitter");
 
         try {
             Thread.sleep(30); //Gives processing time for arduino
@@ -53,73 +53,30 @@ public class ControllerListener extends Listener {
             rollDegrees = leapMotionTX.ChannelShift(leapMotionTX.getRightRollDegrees(), "RR");
             pitchDegrees = leapMotionTX.ChannelShift(leapMotionTX.getRightPitchDegrees(), "RP");
             leftHandThrust = leapMotionTX.ChannelShift(leapMotionTX.getLeftThrustingPitch(), "LT");
-            yawDegrees = leapMotionTX.ChannelShift(leapMotionTX.getLeftYawDegrees(), "LY");
+            yawDegrees = 1500;   // Use this if want to include yaw: leapMotionTX.ChannelShift(leapMotionTX.getLeftYawDegrees(), "LY");
         } else {
-            rollDegrees = 1200;
+            leftHandThrust = 1000;
+            rollDegrees = 1500;
             pitchDegrees = 1500;
-            leftHandThrust = 1500;
             yawDegrees = 1500;
         }
     }
 
     public void onInit(Controller controller) {
         System.out.println("Controller initialized");
+
+        try {
+            Thread.sleep(30); //Gives processing time for controller to connect
+        } catch (InterruptedException e) {
+            System.out.println("onFrame Sleep Exception: ");
+            e.printStackTrace();
+        }
     }
 
     public void onConnect(Controller controller) {
         System.out.println("Controller is connected");
 
-        //AskCalibration();
-
-        System.out.println("Program is starting");
-
-
-    }
-
-    private void AskCalibration(){
-
-
-        System.out.println("Do you need to calibrate the controller for Liftoff?   y/n");
-
-        String nextInput;
-        nextInput = input.nextLine();
-
-        if (nextInput.equals("y")) {
-            StartLiftoffCalibration();
-        } else {
-            System.out.println("Cancelled Calibration");
-        }
-    }
-
-    private void StartLiftoffCalibration() {
-        System.out.println("Starting Calibration...");
-        System.out.println("Press \"s\" when you click \"start calibration\" in Liftoff");
-
-
-        String nextInput;
-        nextInput = input.nextLine();
-
-
-        //System.out.println(nextInput);
-        if (nextInput.equals("s")) {
-            CalibrateRotateSticks();
-        } else {
-            System.out.println("Cancelled Calibration");
-        }
-
-
-    }
-
-    private void CalibrateRotateSticks() {
-        System.out.println("Writing to port");
-        portWriter.write(1200 + "," + 1300 + "," + 1500 + "," + 1800); //Writes to serial port
-        System.out.println("Wrote to Port");
-        try {
-            Thread.sleep(30); //Gives processing time for arduino
-        } catch (InterruptedException e) {
-            System.out.println("onFrame Sleep Exception: ");
-            e.printStackTrace();
-        }
+        System.out.println("Program is starting...");
     }
 
 
