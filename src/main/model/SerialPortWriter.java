@@ -40,7 +40,7 @@ public class SerialPortWriter implements SerialPortEventListener {
 
     // MODIFIES: this.
     // EFFECT: Disconnects the serial COM port when not in use.
-    // Disconnects COM port after not in use.
+    //         Disconnects COM port after not in use.
     public void disconnect() {
         try {
             sp.closePort();
@@ -60,5 +60,4 @@ public class SerialPortWriter implements SerialPortEventListener {
             e.printStackTrace();
         }
     }
-
 }

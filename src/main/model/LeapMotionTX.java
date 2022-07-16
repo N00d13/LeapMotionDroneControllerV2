@@ -45,10 +45,10 @@ public class LeapMotionTX {
     public float getRightRollDegrees() {
         if (rightHand.isRight()) {
             float rollVector = rightHand.palmNormal().roll();
-
             float rollDegrees = rollVector * (float) (180/Math.PI);
             rollDegrees *= -1;
 
+            // Set upper and lower bounds to maintain proper roll when flying
             if (rollDegrees < -45 || (rollDegrees > 100 && rollDegrees < 150)) {
                 rollDegrees = -45;
             } else if (rollDegrees > 45) {
@@ -70,6 +70,7 @@ public class LeapMotionTX {
             float pitchDegrees = pitchVector * (float) (180/Math.PI);
             pitchDegrees = pitchConversion(pitchDegrees);
 
+            // Set upper and lower bounds to maintain proper pitch when flying
             if (pitchDegrees < -45) {
                 pitchDegrees = -45;
             } else if (pitchDegrees > 45) {
@@ -90,6 +91,7 @@ public class LeapMotionTX {
             float yawVector = leftHand.palmNormal().roll();
             float yawDegrees = yawVector * (float) (180/Math.PI);
 
+            // Set upper and lower bounds to maintain proper yaw when flying
             if (yawDegrees < -45 || (yawDegrees > 100 && yawDegrees < 150)) {
                 yawDegrees = -45;
             } else if (yawDegrees > 45) {
@@ -110,9 +112,9 @@ public class LeapMotionTX {
         if (leftHand.isLeft()) {
             float pitchVector = leftHand.palmNormal().pitch();
             float thrustingDegrees = pitchVector * (float) (180/Math.PI);
-
             thrustingDegrees = pitchConversion(thrustingDegrees);
 
+            // Set upper and lower bounds to maintain proper thrust when flying
             if (thrustingDegrees < 0) {
                 thrustingDegrees = 0;
             } else if (thrustingDegrees > 90) {
@@ -136,35 +138,36 @@ public class LeapMotionTX {
     }
 
     // EFFECT: Returns a shifted channel level for conversion to Arduino.
+    //         Converts degrees from hand motions to drone channels that read from 1000-2000, with respect to bounds.
     //         If the channel name inputted doesn't exist then returns -1.
     public int ChannelShift(float value, String channel){
-        //channel shift for right roll
+        // Channel shift for right roll
         if (channel == "RR"){
             value += 45.0;
-            value *= 11.11; //Value of 100/9
+            value *= 11.11; //Value of 100/9 -> (channel lower bound 1000)/(degrees 90)
             value += 1000;
             return (int) value;
         }
-        //channel shift for right pitch
+        // Channel shift for right pitch
         else if (channel == "RP"){
             value += 45.0;
-            value *= 11.11; //Value of 100/9
+            value *= 11.11; // Value of 100/9
             value += 1000;
             return (int) value;
         }
-        //channel shift for left thrust
+        // Channel shift for left thrust
         else if (channel == "LT"){
-            value *= 11.11; //Value of 100/9
+            value *= 11.11; // Value of 100/9
             value += 1000;
             if (value > 1200){
                 value = 1200;
             }
             return (int) value;
         }
-        //channel shift for left yaw
+        // Channel shift for left yaw
         else if (channel == "LY"){
             value += 45.0;
-            value *= 11.11; //Value of 100/9
+            value *= 11.11; // Value of 100/9
             value += 1000;
             return (int) value;
         }

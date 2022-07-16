@@ -25,7 +25,7 @@ public class LeapMotionControllerApp {
     // MODIFIES: this.
     // EFFECT: Sets up the listener and controller object with the correct serial COM port.
     private void init() {
-        String port = getPort();
+        String port = getPort(); // Find current connected port to use
 
         SerialPortWriter portWriter = new SerialPortWriter();
         portWriter.connect(port, 38400, 8, 1, 0);
@@ -70,5 +70,4 @@ public class LeapMotionControllerApp {
         }
         return ourPort;
     }
-
 }

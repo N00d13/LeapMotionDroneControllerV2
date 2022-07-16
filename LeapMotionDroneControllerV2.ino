@@ -16,18 +16,16 @@ volatile uint16_t PpmIn[NO_OF_PPM_CHANNELS]; //Array that holds servo values for
 
 // MODIFIES: this.
 // EFFECT: Initializes the program waits for the serial COM port to be connected.
-void setup()
-{
+void setup() {
   Serial.begin(38400); //Begins serial
 
   //Initialize all channels with default value
-  for (uint8_t channel = 0; channel < sizeof(PpmIn) / sizeof(int); channel++)
-  {
+  for (uint8_t channel = 0; channel < sizeof(PpmIn) / sizeof(int); channel++) {
     PpmIn[channel] = DEFAULT_SERVO_VALUE;
   }
 
   /* SETUP PPM */
-  pinMode(SIGNAL_PIN, OUTPUT); // Sets pin behavior as ouput
+  pinMode(SIGNAL_PIN, OUTPUT); // Sets pin behavior as output
   digitalWrite(SIGNAL_PIN, !IS_POSITIVE_POLARITY);  //set the PPM signal pin to the default state (off)
 
   cli();
@@ -51,7 +49,9 @@ void setup()
 //         Sets the corresponding ppm channel numbers.
 //         Sends the channel numbers into single frame to the transmitter.
 void loop() {
+  int pitch, roll, thrust, yaw;
   String incomingData = "";
+
   if (Serial.available()) {
     delay(20); //wait for data to arrive
     while (Serial.available()) {
@@ -63,15 +63,12 @@ void loop() {
   char dataChar[dataLength];
   incomingData.toCharArray(dataChar, dataLength);
 
-  int pitch, roll, thrust, yaw;
-
   if (sscanf(dataChar, "%d,%d,%d,%d", &pitch, &roll, &thrust, &yaw) == 4) {
     setPPM(1, thrust);
     setPPM(2, roll);
     setPPM(3, pitch);
     setPPM(4, yaw);
   }
-
 }
 
 // MODIFIES: this.
@@ -82,40 +79,35 @@ void setPPM(uint8_t channel_num, uint16_t ppm_value) {
 
 // MODIFIES: this.
 // EFFECT: Sends the channel information into PPM signals to the transmitter.
-ISR(TIMER1_COMPA_vect)
-{
+ISR(TIMER1_COMPA_vect) {
   static boolean state = true;
 
-  //copy incomming values to ppm array
-  memcpy( (void*)Ppm, (void*)PpmIn, sizeof(Ppm));
+  // Copy incoming values to ppm array
+  memcpy((void*)Ppm, (void*)PpmIn, sizeof(Ppm));
 
   TCNT1 = 0;
 
-  if (state)
-  {
-    //start pulse
+  if (state) {
+    // Start pulse
     digitalWrite(SIGNAL_PIN, IS_POSITIVE_POLARITY);
     OCR1A = PPM_PULSE_LEN * 2;
     state = false;
   }
-  else
-  {
-    //end pulse and calculate when to start the next pulse
+  else {
+    // End pulse and calculate when to start the next pulse
     static byte cur_chan_numb;
     static unsigned int calc_rest;
 
     digitalWrite(SIGNAL_PIN, !IS_POSITIVE_POLARITY);
     state = true;
 
-    if (cur_chan_numb >= NO_OF_PPM_CHANNELS)
-    {
+    if (cur_chan_numb >= NO_OF_PPM_CHANNELS) {
       cur_chan_numb = 0;
       calc_rest = calc_rest + PPM_PULSE_LEN;//
       OCR1A = (PPM_FRAME_LEN - calc_rest) * 2;
       calc_rest = 0;
     }
-    else
-    {
+    else {
       OCR1A = (Ppm[cur_chan_numb] - PPM_PULSE_LEN) * 2;
       calc_rest = calc_rest + Ppm[cur_chan_numb];
       cur_chan_numb++;
