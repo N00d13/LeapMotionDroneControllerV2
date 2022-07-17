@@ -1,8 +1,16 @@
 # Leap Motion Hand Drone Controller
 
 ## Project Description
-Create a program that can read hand muscle movement and 
-be able to fly a drone according to that information.
+
+### Intro
+
+Our software was created to read hand muscle movement from a LeapMotion Device and be able to fly a drone according to that information.
+
+### How it works!
+
+#### Demo
+
+Check out the video below to see it work in action!
 
 ## Contributors:
 Matthew Kaye and Saina Koukpari
