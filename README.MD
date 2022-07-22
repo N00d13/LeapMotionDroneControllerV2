@@ -32,5 +32,17 @@ Check out the video below to see it work in action!
 
 (input video)
 
+## How to Fly!
+
+### Step 1: Set transmitter input
+
+### Step 2: Connect 
+
+### Step 3: Configure drone
+
+### Step 4: Run code
+
+### Step 5: Fly!
+
 ## Contributors:
 Matthew Kaye and Saina Koukpari
