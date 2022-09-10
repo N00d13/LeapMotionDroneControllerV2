@@ -32,17 +32,23 @@ Check out the video below to see it work in action!
 
 (input video)
 
-## How to Fly!
+### How to Fly!
 
-### Step 1: Set transmitter input
+#### Step 1: Set transmitter input
 
-### Step 2: Connect 
+#### Step 2: Connect
 
-### Step 3: Configure drone
+It's time to connect everything together! You'll need the leapmotion device and arduino connected to your computer or laptop by USB port. The arduino should also connect to your transmitter via a 2pin Screw terminal Jack audio connector. 
 
-### Step 4: Run code
+#### Step 3: Configure drone
 
-### Step 5: Fly!
+#### Step 4: Run code
+
+Now that everything is set up, simply run the code to get started!
+
+#### Step 5: Fly!
+
+Holding your hands above the leapmotion device, you can now fly your drone! Make sure you have a safety switch that can turn your propellors off and on. Once the switch is flipped and the propellors start going, use your left hand to take off, controlling the thrust by angling your hand up and down. The right hand controls the drones directions, angle your hand up and down to control pitch (moving the drone forwards/backwards) or angle your hand from side to side to control roll (moving the drone right/left). 
 
 ## Contributors:
 Matthew Kaye and Saina Koukpari
