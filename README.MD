@@ -4,11 +4,19 @@
 
 ### Intro
 
-Our software was created to read hand muscle movement from a LeapMotion Device and be able to fly a drone according to that information.
+Our software was created to read hand muscle movement from a LeapMotion Device and be able to fly a drone according to that information. Going into the project, we didn't want to change any drone components so our program had to modify the drone transmitter's output signals to the drone's receiver.
 
 ### How it works!
 
-In order to communicate our hand movements to the drone reciever, we sent information through an arduino device to the drone transmitter to change its ppm. Effectively the hand movements are interpreted in a manner that changes the channels directly on the transmitter which can communicate to the drones reciver. 
+In order to communicate our hand movements to the drone reciever, we first send the normal vector rotation of our right and left hand to a java program using an API provided by Leapmotion. With this information, we calculate the degrees forward (pitch) and side (roll) of each hand for it's corresponding drone channel values. The left hand pitch up and down relates to thrust power to raise and lower the drone. The right-hand pitch relates to the pitch movement of the drone, and the right-hand roll relates to the roll movement of the drone.
+
+We then send each channel value on one text line seperated by commas through a serial com port to a program written in Arduino. Fun fact: The program sends new channel values every 30 milliseconds, that's 33 times a second!
+
+Once the arduino program reads the incoming text line, it sends a 
+
+
+
+we sent information through an Arduino device to the drone transmitter to change its ppm. Effectively the hand movements are interpreted in a manner that changes the channels directly on the transmitter which can communicate to the drones reciver. 
 
 #### ControllerListener
 
@@ -30,7 +38,7 @@ The last step is to send the PPM from information read through the serial COM po
 
 Check out the video below to see it work in action!
 
-(input video)
+https://www.youtube.com/watch?v=Db-agA13ZMc&ab_channel=Crunchy_N00d13FPV
 
 ### How to Fly!
 
@@ -38,7 +46,7 @@ Check out the video below to see it work in action!
 
 #### Step 2: Connect
 
-It's time to connect everything together! You'll need the leapmotion device and arduino connected to your computer or laptop by USB port. The arduino should also connect to your transmitter via a 2pin Screw terminal Jack audio connector. 
+It's time to connect everything together! You'll need the leapmotion device and Arduino connected to your computer or laptop by USB port. The Arduino should also connect to your transmitter via a 2pin Screw terminal Jack audio connector. 
 
 #### Step 3: Configure drone
 
