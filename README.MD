@@ -51,9 +51,12 @@ Follow these steps:
   5. Scroll until you reach "TR1". This means trainer port channel 1.
   6. Click "TR1" to confirm your selection.
   7. Click your "Exit" button until your reach the "INPUTS" page again.
-  8. Start again from step 1 until you finish the first 3 channels but change "TR1" to "TR2" for channel 2 and "TR3" for channel 3.
-  9. Channel 4 is supposed to be for yaw but we found that our drone flew better without it. If you would like to use yaw, go to level 10, otherwise skip to level 11.
-  10. 
+  8. Start again from step 3 for channel 2 and 3 but instead of "TR1", use "TR2" for channel 2 and "TR3" for channel 3.
+  9. Channel 4 is supposed to be for yaw but we found that our drone flew better without it. If you would like to use yaw, go to step 10, otherwise skip to step 11.
+  10. In our code, open the ControllerListener class and scroll down to the "AssignChannelValues" function. Change the "1500" value to the line commented out. Start from step 3 again but use "TR4" instead of "TR1" for the source. Once completed, skip to step 12.
+  11. We found that using "TR4" for our yaw source caused the drone to slowly spin. To avoid this, change the yaw channel source to a random channel that is not in use, we chose channel 12. Start again from step 3 but use "CH12" (or your chosen channel) instead of "TR1".
+  12. We found our elevator (channel 3) to be the opposite of our input. If you experience this, edit your elevator channel (channel 3) and change the "Weight" from "100" to "-100".
+  13. Your transmitter inputs are now set up!
 
 #### Step 2: Connect
 
