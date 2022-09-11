@@ -36,6 +36,8 @@ Check out the video below to see it work in action!
 
 https://www.youtube.com/watch?v=Db-agA13ZMc&ab_channel=Crunchy_N00d13FPV
 
+![](images/youtube-vid-screenshot.jpg)
+
 ### How to Fly!
 
 #### Step 1: Set transmitter input
