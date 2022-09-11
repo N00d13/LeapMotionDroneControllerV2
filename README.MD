@@ -2,13 +2,13 @@
 
 ## Project Description
 
-### Intro
+## Intro
 
 Our software was created to read hand movements from an infrared camera (Leap Motion Controller) and be able to fly a drone according to that information. Going into the project, we didn't want to change any physical components on the drone so we had to create a new system to modify the channel output values on our transmitter. Using this newly developed method, it allows anyone running OpenTx firmware on their transmitter to fly their drone with an Arduino and Leap Motion controller.
 
 <img src="images/project-setup.png" width="800">
 
-### How it works!
+## How it works!
 
 In order to communicate our hand movements to the drone's receiver, we first send the normal vector rotations of our right and left hand to a java program using an API provided by Leap Motion. With this information, we calculate the degrees forward (pitch) and side (roll) of each hand for it's corresponding drone channel values. The left hand pitch up and down relates to thrust power to raise and lower the drone. The right-hand pitch relates to the pitch movement of the drone, and the right-hand roll relates to the roll movement of the drone.
 
@@ -40,7 +40,7 @@ https://www.youtube.com/watch?v=Db-agA13ZMc&ab_channel=Crunchy_N00d13FPV
 
 <img src="images/youtube-vid-screenshot.jpg" width="800">
 
-### How to Fly!
+## How to Fly!
 
 #### Step 1: Set transmitter input
 
