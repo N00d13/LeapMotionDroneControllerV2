@@ -53,7 +53,7 @@ public class ControllerListener extends Listener {
             pitchDegrees = leapMotionTX.ChannelShift(leapMotionTX.getRightPitchDegrees(), "RP");
             leftHandThrust = leapMotionTX.ChannelShift(leapMotionTX.getLeftThrustingPitch(), "LT");
             yawDegrees = 1500;  // Use this if you want to include yaw: leapMotionTX.ChannelShift(leapMotionTX.getLeftYawDegrees(), "LY");
-        } else {                // Set to 'default' joystick positions if no hands ready
+        } else {
             leftHandThrust = 1000;
             rollDegrees = 1500;
             pitchDegrees = 1500;
