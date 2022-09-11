@@ -36,7 +36,7 @@ Check out the video below to see it work in action!
 
 https://www.youtube.com/watch?v=Db-agA13ZMc&ab_channel=Crunchy_N00d13FPV
 
-<img src="images/youtube-vid-screenshot.jpg" width="100>
+<img src="images/youtube-vid-screenshot.jpg" width="100">
 ![](images/youtube-vid-screenshot.jpg)
 
 ### How to Fly!
