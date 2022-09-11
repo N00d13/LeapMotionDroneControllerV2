@@ -1,7 +1,5 @@
 # Leap Motion Hand Drone Controller
 
-## Project Description
-
 ## Intro
 
 Our software was created to read hand movements from an infrared camera (Leap Motion Controller) and be able to fly a drone according to that information. Going into the project, we didn't want to change any physical components on the drone so we had to create a new system to modify the channel output values on our transmitter. Using this newly developed method, it allows anyone running OpenTx firmware on their transmitter to fly their drone with an Arduino and Leap Motion controller.
